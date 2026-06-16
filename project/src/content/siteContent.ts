@@ -219,22 +219,22 @@ export const content: Record<Language, SiteContent> = {
     },
     researchInterests: [
       {
-        title: "Urban Green Space & Environmental Exposure",
-        description: "研究二维绿地、街景可见绿量与街区 PM2.5、碳汇、热风险之间的关系。",
+        title: "Urban Form & Low-Carbon Communities",
+        description: "利用多源城市大数据，研究城市形态、住房空置、土地利用效率与碳排放之间的耦合关系",
       },
       {
-        title: "GIS, Remote Sensing & Street View Data",
-        description: "整合遥感、街景、人口普查、路网与规划单元数据，构建多尺度空间分析框架。",
+        title: "LLMs & Human-Scale Urban Perception",
+        description: "研究大语言模型、街景感知与公众环境感知数据在城市环境评价中的应用",
       },
       {
-        title: "Interpretable Spatial Machine Learning",
-        description: "使用 GWRF、SHAP、PDP、ALE、pSEM 与 Bayesian networks 解释空间异质性和非线性机制。",
+        title: "Urban Climate Risk & Policy-Oriented Planning",
+        description: "研究极端高温、空气污染与社会脆弱性叠加下的城市健康风险，并构建面向气候适应和城市更新的决策支持方法。",
       },
     ],
     education: [
       {
         title: "华中科技大学",
-        subtitle: "风景园林硕士研究生，保研，师从戴菲老师",
+        subtitle: "风景园林硕士研究生，保研\n师从戴菲教授",
         time: "2024 - 2027 预计",
         details: ["研究生绩点 3.75/4.00，排名 3/18", "研究方向包括城市绿色空间、环境暴露、GIS 与空间机器学习"],
       },
@@ -523,22 +523,22 @@ export const content: Record<Language, SiteContent> = {
     },
     researchInterests: [
       {
-        title: "Urban Green Space & Environmental Exposure",
-        description: "2D green space, street-view-visible greenery, PM2.5, carbon mitigation, and urban heat risk.",
+        title: "Urban Form & Low-Carbon Communities",
+        description: "Using multi-source urban big data to study coupled relationships among urban form, housing vacancy, land-use efficiency, and carbon emissions.",
       },
       {
-        title: "GIS, Remote Sensing & Street View Data",
-        description: "Multi-source spatial data workflows across remote sensing, street images, road networks, census data, and planning units.",
+        title: "LLMs & Human-Scale Urban Perception",
+        description: "Studying applications of large language models, street-view perception, and public environmental perception data in urban environmental evaluation.",
       },
       {
-        title: "Interpretable Spatial Machine Learning",
-        description: "GWRF, SHAP, PDP, ALE, pSEM, and Bayesian networks for spatial heterogeneity and nonlinear mechanisms.",
+        title: "Urban Climate Risk & Policy-Oriented Planning",
+        description: "Studying urban health risks under overlapping extreme heat, air pollution, and social vulnerability, and building decision-support methods for climate adaptation and urban renewal.",
       },
     ],
     education: [
       {
         title: "Huazhong University of Science and Technology",
-        subtitle: "Master's Student in Landscape Architecture, recommended admission, supervised by Prof. Fei Dai",
+        subtitle: "Master's Student in Landscape Architecture, recommended admission\nSupervised by Prof. Fei Dai",
         time: "2024 - 2027 expected",
         details: ["Graduate GPA: 3.75/4.00; rank: 3/18", "Research on urban green space, environmental exposure, GIS, and spatial machine learning"],
       },

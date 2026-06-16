@@ -439,6 +439,7 @@ li + li {
 .timeline-item {
   display: grid;
   grid-template-columns: minmax(180px, 260px) minmax(0, 1fr);
+  align-items: start;
   gap: 18px;
   padding: 0 0 18px 22px;
   border-left: 2px dashed rgba(193, 140, 93, 0.45);
@@ -459,6 +460,11 @@ li + li {
 .timeline-item li {
   color: #565648;
   font-weight: 400;
+}
+
+.timeline-item ul {
+  align-self: start;
+  padding-top: 4px;
 }
 
 .project-list {
