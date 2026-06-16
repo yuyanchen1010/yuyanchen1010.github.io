@@ -16,6 +16,10 @@ export type CardItem = {
     src: string;
     alt: string;
   };
+  gallery?: {
+    src: string;
+    alt: string;
+  }[];
   links?: {
     label: string;
     href: string;
@@ -108,7 +112,7 @@ export type SiteContent = {
   };
   skills: {
     title: string;
-    items: string[];
+    description: string;
   }[];
 };
 
@@ -122,7 +126,7 @@ const researchImages = {
   jwjt: "/materials/research/JWJT04.png",
   jwjtThumb: "/materials/research/JWJT04-thumb.jpg",
   zhichen: "/materials/research/zhichen05.pdf",
-  zhichenThumb: "/materials/research/zhichen05-thumb.png",
+  zhichenThumb: "/materials/research/zhichen05-thumb.jpg",
   dali: "/materials/research/dali06.png",
   daliThumb: "/materials/research/dali06-thumb.jpg",
 };
@@ -132,6 +136,24 @@ const conferenceImages = {
   planning2025: "/materials/conferences/planning2025-shenyang.jpg",
   landscape2024: "/materials/conferences/landscape2024-shenzhen.jpg",
   landscape2025: "/materials/conferences/landscape2025-kunming.jpg",
+};
+
+const workImages = {
+  asla2026: [
+    "/materials/works/asla2026-1.jpg",
+    "/materials/works/asla2026-2.jpg",
+    "/materials/works/asla2026-3.jpg",
+  ],
+  ifla2026: [
+    "/materials/works/ifla2026-1.jpg",
+    "/materials/works/ifla2026-2.jpg",
+    "/materials/works/ifla2026-3.jpg",
+  ],
+  asla2025: [
+    "/materials/works/asla2025-1.jpg",
+    "/materials/works/asla2025-2.jpg",
+    "/materials/works/asla2025-3.jpg",
+  ],
 };
 
 export const content: Record<Language, SiteContent> = {
@@ -177,7 +199,7 @@ export const content: Record<Language, SiteContent> = {
       education: "教育背景",
       projects: "科研经历 / 论文",
       academic: "学术经历",
-      funds: "基金项目",
+      funds: "参与基金",
       awards: "奖项与奖学金",
       activities: "竞赛、会议与证书",
       works: "其他作品",
@@ -214,18 +236,18 @@ export const content: Record<Language, SiteContent> = {
         title: "华中科技大学",
         subtitle: "风景园林硕士研究生，保研，师从戴菲老师",
         time: "2024 - 2027 预计",
-        details: ["研究生排名 3/18", "研究方向包括城市绿色空间、环境暴露、GIS 与空间机器学习"],
+        details: ["研究生绩点 3.75/4.00，排名 3/18", "研究方向包括城市绿色空间、环境暴露、GIS 与空间机器学习"],
       },
       {
         title: "北京林业大学",
         subtitle: "风景园林本科",
-        time: "本科阶段",
+        time: "2020 - 2024",
         details: ["绩点 90.37/100，排名 5/122，前 4%", "CET-6 577 分，CET-4 607 分"],
       },
     ],
     projects: [
       {
-        title: "Unravelling the Differentiated Effects of the Block Built Environment on PM2.5 Concentrations",
+        title: "Unravelling the Differentiated Effects of the Block Built Environment on PM2.5 Concentrations: A New Research Framework based on the Perspective of Source–Flow–Sink",
         meta: "Paper 01 / Sustainable Cities and Society",
         type: "First Author",
         description:
@@ -235,7 +257,7 @@ export const content: Record<Language, SiteContent> = {
         links: [{ label: "Figure", href: researchImages.lczpm }],
       },
       {
-        title: "Street-view-derived visible green-space configuration for block-scale PM2.5 analysis",
+        title: "Street-view-derived visible green-space configuration for block-scale PM2.5 analysis: A comparable 2D–3D framework from Wuhan, China",
         meta: "Paper 02 / Remote Sensing of Environment",
         type: "Second Author",
         description:
@@ -245,7 +267,7 @@ export const content: Record<Language, SiteContent> = {
         links: [{ label: "Figure", href: researchImages.gvipm }],
       },
       {
-        title: "From Green Space to Park-Based Cooling Potential",
+        title: "From Green Space to Park-Based Cooxling Potential: Performance-Weighted Walkable Access to Urban Park Cooling in Detroit",
         meta: "Paper 03 / Sustainable Cities and Society, accepted",
         type: "Second Author",
         description:
@@ -255,7 +277,7 @@ export const content: Record<Language, SiteContent> = {
         links: [{ label: "Figure", href: researchImages.cooling }],
       },
       {
-        title: "城市绿色空间多维属性对“降碳减污”效益的协同与权衡关系",
+        title: "城市绿色空间多维属性对“降碳减污”效益的协同与权衡关系——以武汉市主城区街区单元为例",
         meta: "Paper 04 / Journal manuscript",
         type: "Second Author",
         description:
@@ -265,7 +287,7 @@ export const content: Record<Language, SiteContent> = {
         links: [{ label: "Figure", href: researchImages.jwjt }],
       },
       {
-        title: "基于滞尘模型的绿色空间格局对 PM2.5 影响研究",
+        title: "基于滞尘模型的绿色空间格局对PM2.5影响研究",
         meta: "Paper 05 / 中国城市规划年会 Poster",
         type: "First Author",
         description:
@@ -275,7 +297,7 @@ export const content: Record<Language, SiteContent> = {
         links: [{ label: "Poster PDF", href: researchImages.zhichen }],
       },
       {
-        title: "A Study on the Construction of Cultural Heritage Corridors Based on Spatial Econometrics",
+        title: "基于空间计量的文化遗产廊道构建研究——以大理市为例",
         meta: "Paper 06 / 中国风景园林年会",
         type: "First Author",
         description:
@@ -285,45 +307,51 @@ export const content: Record<Language, SiteContent> = {
         links: [{ label: "Figure", href: researchImages.dali }],
       },
     ],
-    academicExperience: [
-      {
-        title: "论文写作与投稿准备",
-        meta: "2025 - 2026",
-        type: "Research Experience",
-        description: "围绕城市绿色空间、PM2.5、热风险和文化遗产保护开展多篇论文与会议投稿，承担一作与二作研究任务。",
-        tags: ["Manuscript", "Submission", "Academic Writing"],
-      },
-      {
-        title: "空间数据处理与可视化",
-        meta: "GIS / Remote Sensing / Street View",
-        type: "Methods",
-        description: "处理遥感、街景、路网、普查、空气质量和规划单元等多源数据，形成研究图件、指标体系和模型解释结果。",
-        tags: ["GIS", "Mapping", "Visualization"],
-      },
-      {
-        title: "跨尺度环境绩效分析",
-        meta: "Block / Park / City",
-        type: "Research Theme",
-        description: "从街区、公园和城市尺度分析绿色空间绩效，将环境效益与步行可达性、社会脆弱性和规划治理单元联系起来。",
-        tags: ["Urban Environment", "Planning Evidence"],
-      },
-    ],
+    academicExperience: [],
     funds: [
       {
-        title: "项目材料待补充",
-        meta: "Funded Projects",
-        type: "Research Funding",
-        description: "可继续补充基金项目名称、项目来源、个人角色、研究内容与阶段性成果。",
-        tags: ["Funding", "Research"],
+        title: "国家自然科学基金重点项目基金申报",
+        meta: "2026.02 - 2026.03",
+        type: "参与申报",
+        description: "参与《协同推进“降碳、减污、扩绿、增长”城乡生态空间规划理论与方法》申报，负责研究内容、各子项目研究框图、研究方法以及拟采取的研究方案。",
+        tags: ["NSFC", "重点项目", "城乡生态空间", "研究方案"],
+      },
+      {
+        title: "国家社会科学基金重大项目投标",
+        meta: "2025.07",
+        type: "参与投标",
+        description: "参与《基于多源时空异构大数据的绿色转型风险监测与防范研究》投标，负责子项目三《基于多源时空异构大数据的“降碳-减污”风险识别与动态监测研究》。",
+        tags: ["国家社科基金", "重大项目", "绿色转型", "风险监测"],
+      },
+      {
+        title: "山区河流保护与治理全国重点实验室开放合作基金申请",
+        meta: "2025.11 - 2025.12",
+        type: "参与申请",
+        description: "参与四川大学山区河流保护与治理全国重点实验室开放合作基金《金沙江下游生态产品价值时空演变机制及影响因素研究》申请，负责已有工作基础及相关研究成果、申请人简历。",
+        tags: ["开放合作基金", "金沙江下游", "生态产品价值", "申请材料"],
       },
     ],
     awards: [
       {
-        title: "成绩与语言能力",
-        meta: "Academic Record",
-        type: "Honors",
-        description: "本科排名前 4%，研究生排名 3/18；CET-6 577 分，CET-4 607 分。",
-        tags: ["GPA", "Ranking", "English"],
+        title: "研究生阶段荣誉奖项",
+        meta: "2023 - 2025",
+        type: "荣誉奖项",
+        description: "2024-2025 学年度：华中科技大学科技创新奖学金、华中科技大学二等硕士学业奖学金。\n2023-2024 学年度：华中科技大学一等硕士学业奖学金。",
+        tags: ["科技创新奖学金", "一等硕士学业奖学金", "二等硕士学业奖学金", "HUST"],
+      },
+      {
+        title: "本科阶段荣誉奖项",
+        meta: "2020 - 2024",
+        type: "荣誉奖项",
+        description: "2023-2024 学年度：北京林业大学优秀毕业生。\n2020-2023 学年度：校优秀学生二等奖学金（连续 3 年）。\n2020-2022 学年度：校三好学生（连续 2 年）。\n2022-2023 学年度：院十佳团干部（全院仅 10 人）。\n2020-2021 学年度：校优秀组织委员（全校仅 55 人）、校优秀学生干部。",
+        tags: ["优秀毕业生", "二等奖学金", "三好学生", "十佳团干部", "学生干部"],
+      },
+      {
+        title: "竞赛经历",
+        meta: "2022 - 2025",
+        type: "竞赛经历",
+        description: "2025.07-2025.12：2025 园冶杯大学生国际竞赛二等奖（1/3）。\n2025.02-2025.03：世界人居建筑与环境设计大赛银奖（1/5）。\n2023.02-2023.06：2023 园冶杯大学生国际竞赛荣誉奖（1/1）。\n2022.05-2022.06：2022 园冶杯大学生国际竞赛荣誉奖（4/5）。",
+        tags: ["园冶杯", "二等奖", "银奖", "荣誉奖"],
       },
     ],
     activities: [
@@ -363,28 +391,46 @@ export const content: Record<Language, SiteContent> = {
         image: { src: conferenceImages.landscape2024, alt: "2024 年第十四届中国风景园林学会年会深圳光明文化艺术中心材料" },
         links: [{ label: "会议材料", href: conferenceImages.landscape2024 }],
       },
-      {
-        title: "中国城市规划年会 / 中国风景园林年会",
-        meta: "Conference Submissions",
-        type: "Academic Activities",
-        description: "以一作身份准备并投稿绿色空间 PM2.5 滞尘研究与大理文化遗产廊道研究。",
-        tags: ["Conference", "Poster", "First Author"],
-      },
     ],
     works: [
       {
-        title: "图件、模型与作品集材料",
-        meta: "Portfolio",
-        type: "Creative Work",
-        description: "后续可继续加入作品集图纸、水彩、模型、竞赛成果与证书材料。",
-        tags: ["Portfolio", "Design", "Visualization"],
+        title: "Lungs of the City: Optimizing Designing Streetscapes for Runner Health",
+        meta: "ASLA 2026 专业组",
+        type: "Competition Boards",
+        description: "围绕跑者健康与街道景观优化展开设计，结合方法分析、实证研究与街景策略图纸表达。",
+        tags: ["ASLA 2026", "Streetscape", "Runner Health"],
+        gallery: workImages.asla2026.map((src, index) => ({
+          src,
+          alt: `ASLA 2026 专业组作品图纸 ${index + 1}`,
+        })),
+      },
+      {
+        title: "Greenery and Wind: Landscape Strategies for Air Pollution Mitigation Along the NYC Marathon Route",
+        meta: "IFLA 2026 学生组",
+        type: "Competition Boards",
+        description: "以纽约马拉松路线为对象，提出结合绿化密度、通风空间与灵活绿地系统的空气污染缓解景观策略。",
+        tags: ["IFLA 2026", "Air Pollution", "NYC Marathon"],
+        gallery: workImages.ifla2026.map((src, index) => ({
+          src,
+          alt: `IFLA 2026 学生组作品图纸 ${index + 1}`,
+        })),
+      },
+      {
+        title: "More Running More Greening",
+        meta: "ASLA 2025 学生组",
+        type: "Competition Boards",
+        description: "从城市跑步路径与绿色空间联动出发，探索运动健康、公共空间与绿化系统融合的设计方案。",
+        tags: ["ASLA 2025", "Urban Running", "Green Space"],
+        gallery: workImages.asla2025.map((src, index) => ({
+          src,
+          alt: `ASLA 2025 学生组作品图纸 ${index + 1}`,
+        })),
       },
     ],
     news: [
-      { date: "2026.06", text: "补充 VALSE 2026、2025 中国城市规划年会与中国风景园林学会年会 2024/2025 的参会材料，并标注会议日期、城市与具体场馆。" },
-      { date: "2026.06", text: "根据最新自我介绍与 research experience 材料更新个人网站。" },
-      { date: "2026.06", text: "整理 6 篇论文/会议稿条目，并按文件名后缀编号匹配对应图件。" },
-      { date: "2026.06", text: "补充个人照片、教育背景、排名、英语成绩与联系方式。" },
+      { date: "2026.06", text: "以第二作者身份（老师一作）在《Sustainable Cities and Society》期刊投稿的论文《From Green Space to Park-Based Cooxling Potential: Performance-Weighted Walkable Access to Urban Park Cooling in Detroit》被顺利接收。" },
+      { date: "2025.11", text: "以第一作者身份在中国风景园林年会上发表论文《基于空间计量的文化遗产廊道构建研究——以大理市为例》并参会。" },
+      { date: "2025.08", text: "以第一作者身份在中国城市规划年会上发表 poster《基于滞尘模型的绿色空间格局对PM2.5影响研究》并参会。" },
     ],
     contact: {
       body:
@@ -402,15 +448,17 @@ export const content: Record<Language, SiteContent> = {
       ],
       futureTitle: "未来研究计划",
       future: [
-        "博士阶段希望继续围绕城市绿色空间绩效、环境健康、街景感知、空间机器学习和规划治理展开研究。",
-        "后续网站可以继续加入论文 PDF、poster、作品集下载、获奖证书与更完整的项目详情页。",
+        "未来，我希望围绕“AI与多源城市大数据驱动的城市低碳转型、健康环境与气候韧性治理”开展研究。基于既有关于城市绿色空间、PM2.5缓解效应、碳汇/生态功能评估以及机器学习建模的研究基础，我计划进一步拓展对城市空间要素、环境风险与政策干预之间关系的量化分析。",
+        "一方面，我希望结合遥感影像、街景图像、人口活动数据、建筑与住房数据等多源城市大数据，利用机器学习、空间统计和因果推断方法，识别城市形态、住房空置、土地利用效率与碳排放之间的耦合机制，为存量空间更新、低碳社区建设和精细化城市治理提供依据。",
+        "另一方面，我也希望探索大语言模型与街景感知、城市文本数据和公众环境感知数据的结合，构建面向人本尺度的城市环境评价方法，弥补传统遥感和统计数据在微观感知、街道体验和居民暴露层面的不足。",
+        "此外，面对极端高温、空气污染等复合气候风险，我计划进一步研究城市绿地、蓝绿基础设施、建筑形态和社会脆弱性对热暴露与健康风险的影响，量化不同规划策略的减缓效果，并形成可与城市更新、气候适应规划和公共政策衔接的决策支持框架。总体而言，我希望未来的研究不仅停留在环境现象识别和模型预测层面，而是进一步走向机制解释、情景模拟和政策转化，为高密度城市的低碳发展、气候适应和宜居性提升提供更具实践价值的科学证据。",
       ],
       skillsTitle: "技能",
     },
     skills: [
-      { title: "Spatial Tools", items: ["ArcGIS", "QGIS", "Remote Sensing", "Network Analysis"] },
-      { title: "Programming", items: ["Python", "Machine Learning", "GWRF-SHAP", "Data Visualization"] },
-      { title: "Research", items: ["Academic Writing", "Spatial Econometrics", "Street View Analysis", "Planning Evidence"] },
+      { title: "空间分析", description: "熟练使用 ArcGIS/QGIS、ENVI、InVEST、Fragstats、Guidos、GeoDa。" },
+      { title: "算法建模", description: "基本掌握 Python、MATLAB、SPSS、机器学习算法、MGWR 及 CiteSpace 的使用，熟练使用 Cursor、Codex 等 AI 编程工具。" },
+      { title: "专业素养", description: "具备独立构建研究框架、多源大数据处理及高质量中英文学术论文撰写能力。" },
     ],
   },
   en: {
@@ -455,7 +503,7 @@ export const content: Record<Language, SiteContent> = {
       education: "Education",
       projects: "Research Experience / Papers",
       academic: "Academic Experience",
-      funds: "Funded Projects",
+      funds: "Fund Participation",
       awards: "Awards & Scholarships",
       activities: "Competitions, Conferences & Certificates",
       works: "Other Works",
@@ -492,18 +540,18 @@ export const content: Record<Language, SiteContent> = {
         title: "Huazhong University of Science and Technology",
         subtitle: "Master's Student in Landscape Architecture, recommended admission, supervised by Prof. Fei Dai",
         time: "2024 - 2027 expected",
-        details: ["Graduate ranking: 3/18", "Research on urban green space, environmental exposure, GIS, and spatial machine learning"],
+        details: ["Graduate GPA: 3.75/4.00; rank: 3/18", "Research on urban green space, environmental exposure, GIS, and spatial machine learning"],
       },
       {
         title: "Beijing Forestry University",
         subtitle: "Bachelor's degree in Landscape Architecture",
-        time: "Undergraduate",
+        time: "2020 - 2024",
         details: ["GPA: 90.37/100; rank: 5/122, top 4%", "CET-6: 577; CET-4: 607"],
       },
     ],
     projects: [
       {
-        title: "Unravelling the Differentiated Effects of the Block Built Environment on PM2.5 Concentrations",
+        title: "Unravelling the Differentiated Effects of the Block Built Environment on PM2.5 Concentrations: A New Research Framework based on the Perspective of Source–Flow–Sink",
         meta: "Paper 01 / Sustainable Cities and Society",
         type: "First Author",
         description:
@@ -513,7 +561,7 @@ export const content: Record<Language, SiteContent> = {
         links: [{ label: "Figure", href: researchImages.lczpm }],
       },
       {
-        title: "Street-view-derived visible green-space configuration for block-scale PM2.5 analysis",
+        title: "Street-view-derived visible green-space configuration for block-scale PM2.5 analysis: A comparable 2D–3D framework from Wuhan, China",
         meta: "Paper 02 / Remote Sensing of Environment",
         type: "Second Author",
         description:
@@ -523,7 +571,7 @@ export const content: Record<Language, SiteContent> = {
         links: [{ label: "Figure", href: researchImages.gvipm }],
       },
       {
-        title: "From Green Space to Park-Based Cooling Potential",
+        title: "From Green Space to Park-Based Cooxling Potential: Performance-Weighted Walkable Access to Urban Park Cooling in Detroit",
         meta: "Paper 03 / Sustainable Cities and Society, accepted",
         type: "Second Author",
         description:
@@ -533,7 +581,7 @@ export const content: Record<Language, SiteContent> = {
         links: [{ label: "Figure", href: researchImages.cooling }],
       },
       {
-        title: "Synergies and Trade-offs of Multidimensional Urban Green Space for Carbon Mitigation and Pollution Reduction",
+        title: "城市绿色空间多维属性对“降碳减污”效益的协同与权衡关系——以武汉市主城区街区单元为例",
         meta: "Paper 04 / Journal manuscript",
         type: "Second Author",
         description:
@@ -543,7 +591,7 @@ export const content: Record<Language, SiteContent> = {
         links: [{ label: "Figure", href: researchImages.jwjt }],
       },
       {
-        title: "Effects of Green Space Pattern on PM2.5 Based on a Dust Retention Model",
+        title: "基于滞尘模型的绿色空间格局对PM2.5影响研究",
         meta: "Paper 05 / Annual National Planning Conference Poster",
         type: "First Author",
         description:
@@ -553,7 +601,7 @@ export const content: Record<Language, SiteContent> = {
         links: [{ label: "Poster PDF", href: researchImages.zhichen }],
       },
       {
-        title: "A Study on the Construction of Cultural Heritage Corridors Based on Spatial Econometrics",
+        title: "基于空间计量的文化遗产廊道构建研究——以大理市为例",
         meta: "Paper 06 / Chinese Landscape Architecture Annual Conference",
         type: "First Author",
         description:
@@ -563,45 +611,51 @@ export const content: Record<Language, SiteContent> = {
         links: [{ label: "Figure", href: researchImages.dali }],
       },
     ],
-    academicExperience: [
-      {
-        title: "Manuscript writing and submission preparation",
-        meta: "2025 - 2026",
-        type: "Research Experience",
-        description: "Prepared journal manuscripts and conference submissions on urban green space, PM2.5, heat risk, and cultural heritage protection as first or second author.",
-        tags: ["Manuscript", "Submission", "Academic Writing"],
-      },
-      {
-        title: "Spatial data processing and visualization",
-        meta: "GIS / Remote Sensing / Street View",
-        type: "Methods",
-        description: "Built workflows for remote sensing, street-view, road-network, census, air-quality, and planning-unit data, producing research figures and model interpretation outputs.",
-        tags: ["GIS", "Mapping", "Visualization"],
-      },
-      {
-        title: "Cross-scale environmental performance analysis",
-        meta: "Block / Park / City",
-        type: "Research Theme",
-        description: "Studied green-space performance across block, park, and city scales, linking environmental benefits with walkability, vulnerability, and planning governance units.",
-        tags: ["Urban Environment", "Planning Evidence"],
-      },
-    ],
+    academicExperience: [],
     funds: [
       {
-        title: "Project materials to be added",
-        meta: "Funded Projects",
-        type: "Research Funding",
-        description: "This section can later include project names, funding sources, personal roles, research content, and outputs.",
-        tags: ["Funding", "Research"],
+        title: "National Natural Science Foundation of China key project proposal",
+        meta: "Feb 2026 - Mar 2026",
+        type: "Proposal Participation",
+        description: "Participated in the proposal for Collaborative Urban-Rural Ecological Space Planning Theory and Methods for Carbon Reduction, Pollution Reduction, Greening, and Growth. Responsible for research content, sub-project framework diagrams, research methods, and proposed technical plans.",
+        tags: ["NSFC", "Key Project", "Ecological Space", "Research Plan"],
+      },
+      {
+        title: "National Social Science Fund major project bid",
+        meta: "Jul 2025",
+        type: "Bid Participation",
+        description: "Participated in the bid for Risk Monitoring and Prevention for Green Transformation Based on Multi-source Spatiotemporal Heterogeneous Big Data. Responsible for sub-project three on carbon-pollution risk identification and dynamic monitoring.",
+        tags: ["NSSFC", "Major Project", "Green Transformation", "Risk Monitoring"],
+      },
+      {
+        title: "Open Cooperation Fund application, State Key Laboratory of Mountain River Protection and Governance",
+        meta: "Nov 2025 - Dec 2025",
+        type: "Application Participation",
+        description: "Participated in the Sichuan University open fund application on spatiotemporal mechanisms and influencing factors of ecological product value in the lower Jinsha River. Responsible for the research foundation, related outputs, and applicant CV materials.",
+        tags: ["Open Fund", "Jinsha River", "Ecological Product Value", "Application Materials"],
       },
     ],
     awards: [
       {
-        title: "Academic record and English proficiency",
-        meta: "Academic Record",
+        title: "Graduate honors",
+        meta: "2023 - 2025",
         type: "Honors",
-        description: "Undergraduate rank in the top 4%; graduate rank 3/18; CET-6 577 and CET-4 607.",
-        tags: ["GPA", "Ranking", "English"],
+        description: "2024-2025: HUST Science and Technology Innovation Scholarship; HUST second-class master's academic scholarship.\n2023-2024: HUST first-class master's academic scholarship.",
+        tags: ["Innovation Scholarship", "First-class Scholarship", "Second-class Scholarship", "HUST"],
+      },
+      {
+        title: "Undergraduate honors",
+        meta: "2020 - 2024",
+        type: "Honors",
+        description: "2023-2024: Outstanding Graduate of Beijing Forestry University.\n2020-2023: university second-class outstanding student scholarship for three consecutive years.\n2020-2022: Merit Student for two consecutive years.\n2022-2023: Top 10 Youth League Cadre in the school.\n2020-2021: Outstanding Organization Committee Member and Outstanding Student Cadre.",
+        tags: ["Outstanding Graduate", "Scholarship", "Merit Student", "Student Cadre"],
+      },
+      {
+        title: "Competition experience",
+        meta: "2022 - 2025",
+        type: "Competition",
+        description: "Jul 2025-Dec 2025: Second Prize in the 2025 Yuan Ye Awards International Student Competition (1/3).\nFeb 2025-Mar 2025: Silver Prize in the World Habitat Architecture and Environment Design Competition (1/5).\nFeb 2023-Jun 2023: Honor Award in the 2023 Yuan Ye Awards International Student Competition (1/1).\nMay 2022-Jun 2022: Honor Award in the 2022 Yuan Ye Awards International Student Competition (4/5).",
+        tags: ["Yuan Ye Awards", "Second Prize", "Silver Prize", "Honor Award"],
       },
     ],
     activities: [
@@ -641,28 +695,46 @@ export const content: Record<Language, SiteContent> = {
         image: { src: conferenceImages.landscape2024, alt: "2024 14th Annual Meeting of Chinese Society of Landscape Architecture material at Shenzhen Guangming Culture and Art Center" },
         links: [{ label: "Material", href: conferenceImages.landscape2024 }],
       },
-      {
-        title: "Annual National Planning Conference / Chinese Landscape Architecture Annual Conference",
-        meta: "Conference Submissions",
-        type: "Academic Activities",
-        description: "Prepared first-author conference submissions on green-space dust retention and cultural heritage corridor construction.",
-        tags: ["Conference", "Poster", "First Author"],
-      },
     ],
     works: [
       {
-        title: "Figures, models, and portfolio materials",
-        meta: "Portfolio",
-        type: "Creative Work",
-        description: "Portfolio boards, watercolor works, models, competition outcomes, and certificates can be added in future updates.",
-        tags: ["Portfolio", "Design", "Visualization"],
+        title: "Lungs of the City: Optimizing Designing Streetscapes for Runner Health",
+        meta: "ASLA 2026 Professional Category",
+        type: "Competition Boards",
+        description: "A streetscape design project for runner health, combining methodological analysis, empirical evidence, and design strategy boards.",
+        tags: ["ASLA 2026", "Streetscape", "Runner Health"],
+        gallery: workImages.asla2026.map((src, index) => ({
+          src,
+          alt: `ASLA 2026 professional category board ${index + 1}`,
+        })),
+      },
+      {
+        title: "Greenery and Wind: Landscape Strategies for Air Pollution Mitigation Along the NYC Marathon Route",
+        meta: "IFLA 2026 Student Category",
+        type: "Competition Boards",
+        description: "A landscape strategy proposal for the NYC Marathon route, integrating vegetation density, ventilation spaces, and flexible green-space systems for air-pollution mitigation.",
+        tags: ["IFLA 2026", "Air Pollution", "NYC Marathon"],
+        gallery: workImages.ifla2026.map((src, index) => ({
+          src,
+          alt: `IFLA 2026 student category board ${index + 1}`,
+        })),
+      },
+      {
+        title: "More Running More Greening",
+        meta: "ASLA 2025 Student Category",
+        type: "Competition Boards",
+        description: "A design exploration connecting urban running routes and green-space systems to support health-oriented public spaces.",
+        tags: ["ASLA 2025", "Urban Running", "Green Space"],
+        gallery: workImages.asla2025.map((src, index) => ({
+          src,
+          alt: `ASLA 2025 student category board ${index + 1}`,
+        })),
       },
     ],
     news: [
-      { date: "Jun 2026", text: "Added materials for VALSE 2026, the 2025 Annual National Planning Conference, and the 2024/2025 Chinese Society of Landscape Architecture annual conferences, with exact dates, cities, and venues." },
-      { date: "Jun 2026", text: "Updated the website with the latest self-introduction and research experience materials." },
-      { date: "Jun 2026", text: "Organized six papers or conference submissions by matching the suffix numbers in material filenames." },
-      { date: "Jun 2026", text: "Added portrait, education background, rankings, English scores, and contact information." },
+      { date: "Jun 2026", text: "The paper From Green Space to Park-Based Cooxling Potential: Performance-Weighted Walkable Access to Urban Park Cooling in Detroit, submitted to Sustainable Cities and Society with me as second author and my supervisor as first author, was accepted." },
+      { date: "Nov 2025", text: "Presented the first-author paper Construction of Cultural Heritage Corridors Based on Spatial Econometrics: A Case Study of Dali at the Chinese Landscape Architecture Annual Conference." },
+      { date: "Aug 2025", text: "Presented the first-author poster Effects of Green Space Pattern on PM2.5 Based on a Dust Retention Model at the Annual National Planning Conference." },
     ],
     contact: {
       body:
@@ -686,9 +758,9 @@ export const content: Record<Language, SiteContent> = {
       skillsTitle: "Skills",
     },
     skills: [
-      { title: "Spatial Tools", items: ["ArcGIS", "QGIS", "Remote Sensing", "Network Analysis"] },
-      { title: "Programming", items: ["Python", "Machine Learning", "GWRF-SHAP", "Data Visualization"] },
-      { title: "Research", items: ["Academic Writing", "Spatial Econometrics", "Street View Analysis", "Planning Evidence"] },
+      { title: "Spatial Analysis", description: "Skilled in ArcGIS/QGIS, ENVI, InVEST, Fragstats, Guidos, and GeoDa." },
+      { title: "Algorithmic Modeling", description: "Basic proficiency in Python, MATLAB, SPSS, machine learning algorithms, MGWR, and CiteSpace; experienced with AI programming tools such as Cursor and Codex." },
+      { title: "Research Competence", description: "Able to independently build research frameworks, process multi-source big data, and write high-quality Chinese and English academic papers." },
     ],
   },
 };

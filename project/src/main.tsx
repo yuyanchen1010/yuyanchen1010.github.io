@@ -1,4 +1,4 @@
-import { StrictMode, useEffect, useMemo, useState, type ReactNode } from "react";
+import { Fragment, StrictMode, useEffect, useMemo, useState, type ReactNode } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter, Link, NavLink, Route, Routes } from "react-router-dom";
 import {
@@ -19,10 +19,18 @@ import {
   Palette,
   ScrollText,
   Sparkles,
-  Trophy,
 } from "lucide-react";
 import { content, type CardItem, type Language, type SiteContent, type TimelineItem } from "./content/siteContent";
 import "./styles.css";
+
+const boldPhrases = [
+  "北京林业大学风景园林专业",
+  "华中科技大学风景园林专业",
+  "90.37/100",
+  "5/122",
+  "3/18",
+  "CET-6 为 577 分",
+];
 
 const getInitialLanguage = (): Language => {
   if (typeof navigator !== "undefined" && navigator.language.toLowerCase().startsWith("zh")) {
@@ -154,8 +162,7 @@ function HomePage({ site }: { language: Language; site: SiteContent }) {
     <>
       <section className="hero-section section-card">
         <p className="eyebrow">{site.homeHero.kicker}</p>
-        <h2>{site.homeHero.heading}</h2>
-        <p>{site.homeHero.body}</p>
+        <p>{formatScientificText(site.homeHero.body)}</p>
         <div className="hero-links">
           <a className="primary-action" href="#projects">
             <BriefcaseBusiness size={18} aria-hidden="true" />
@@ -172,10 +179,9 @@ function HomePage({ site }: { language: Language; site: SiteContent }) {
       <InterestSection title={site.sections.research} interests={site.researchInterests} />
       <EducationSection title={site.sections.education} education={site.education} />
       <CardSection icon={<BriefcaseBusiness />} title={site.sections.projects} items={site.projects} id="projects" />
-      <CardSection icon={<BookOpen />} title={site.sections.academic} items={site.academicExperience} />
+      <CardSection icon={<BookOpen />} title={site.sections.academic} items={[...site.academicExperience, ...site.activities]} />
       <CardSection icon={<Microscope />} title={site.sections.funds} items={site.funds} />
       <CardSection icon={<Award />} title={site.sections.awards} items={site.awards} />
-      <CardSection icon={<Trophy />} title={site.sections.activities} items={site.activities} />
       <CardSection icon={<Palette />} title={site.sections.works} items={site.works} />
       <NewsSection title={site.sections.news} news={site.news} />
       <ContactSection site={site} />
@@ -186,12 +192,6 @@ function HomePage({ site }: { language: Language; site: SiteContent }) {
 function AboutPage({ site }: { language: Language; site: SiteContent }) {
   return (
     <>
-      <section className="hero-section section-card">
-        <p className="eyebrow">{site.aboutPage.kicker}</p>
-        <h2>{site.aboutPage.heading}</h2>
-        <p>{site.aboutPage.lead}</p>
-      </section>
-      <TextSection icon={<ScrollText />} title={site.sections.about} paragraphs={site.about.long} />
       <TextSection
         icon={<Microscope />}
         title={site.aboutPage.motivationTitle}
@@ -210,14 +210,8 @@ function AboutPage({ site }: { language: Language; site: SiteContent }) {
         <div className="skill-grid">
           {site.skills.map((group) => (
             <div className="skill-group" key={group.title}>
-              <h3>{group.title}</h3>
-              <div className="tag-list">
-                {group.items.map((item) => (
-                  <span className="tag" key={item}>
-                    {item}
-                  </span>
-                ))}
-              </div>
+              <h3>{formatScientificText(group.title)}</h3>
+              <p>{formatScientificText(group.description)}</p>
             </div>
           ))}
         </div>
@@ -241,7 +235,7 @@ function TextSection({
       <SectionHeading icon={icon} title={title} />
       <div className="text-flow">
         {paragraphs.map((paragraph) => (
-          <p key={paragraph}>{paragraph}</p>
+          <p key={paragraph}>{formatScientificText(paragraph)}</p>
         ))}
       </div>
     </section>
@@ -261,8 +255,8 @@ function InterestSection({
       <div className="interest-grid">
         {interests.map((interest) => (
           <article className="organic-card" key={interest.title}>
-            <h3>{interest.title}</h3>
-            <p>{interest.description}</p>
+            <h3>{formatScientificText(interest.title)}</h3>
+            <p>{formatScientificText(interest.description)}</p>
           </article>
         ))}
       </div>
@@ -284,13 +278,13 @@ function EducationSection({
         {education.map((item) => (
           <article className="timeline-item" key={`${item.title}-${item.time}`}>
             <div>
-              <span className="time">{item.time}</span>
-              <h3>{item.title}</h3>
-              <p>{item.subtitle}</p>
+              <span className="time">{formatScientificText(item.time)}</span>
+              <h3>{formatScientificText(item.title)}</h3>
+              <p>{formatScientificText(item.subtitle)}</p>
             </div>
             <ul>
               {item.details.map((detail) => (
-                <li key={detail}>{detail}</li>
+                <li key={detail}>{formatScientificText(detail)}</li>
               ))}
             </ul>
           </article>
@@ -322,16 +316,25 @@ function CardSection({
                 <img src={project.image.src} alt={project.image.alt} loading="lazy" />
               </a>
             )}
+            {project.gallery && (
+              <div className="project-gallery">
+                {project.gallery.map((image) => (
+                  <a className="project-gallery-link" href={image.src} key={image.src} target="_blank" rel="noreferrer">
+                    <img src={image.src} alt={image.alt} loading="lazy" />
+                  </a>
+                ))}
+              </div>
+            )}
             <div className="project-topline">
-              <span className="time">{project.meta}</span>
-              <span className="project-type">{project.type}</span>
+              <span className="time">{formatScientificText(project.meta)}</span>
+              <span className="project-type">{formatScientificText(project.type)}</span>
             </div>
-            <h3>{project.title}</h3>
-            <p>{project.description}</p>
+            <h3>{formatScientificText(project.title)}</h3>
+            <p>{formatScientificText(project.description)}</p>
             <div className="tag-list">
               {project.tags.map((tag) => (
                 <span className="tag" key={tag}>
-                  {tag}
+                  {formatScientificText(tag)}
                 </span>
               ))}
             </div>
@@ -339,7 +342,7 @@ function CardSection({
               <div className="inline-links">
                 {project.links.map((link) => (
                   <a href={link.href} key={link.label} target="_blank" rel="noreferrer">
-                    {link.label}
+                    {formatScientificText(link.label)}
                     <ArrowUpRight size={15} aria-hidden="true" />
                   </a>
                 ))}
@@ -366,8 +369,8 @@ function NewsSection({
         {news.map((item) => (
           <article className="news-item" key={`${item.date}-${item.text}`}>
             <CalendarDays size={18} aria-hidden="true" />
-            <span>{item.date}</span>
-            <p>{item.text}</p>
+            <span>{formatScientificText(item.date)}</span>
+            <p>{formatScientificText(item.text)}</p>
           </article>
         ))}
       </div>
@@ -379,7 +382,7 @@ function ContactSection({ site }: { site: SiteContent }) {
   return (
     <section className="contact-section section-card">
       <SectionHeading icon={<Mail />} title={site.sections.contact} />
-      <p>{site.contact.body}</p>
+      <p>{formatScientificText(site.contact.body)}</p>
       <div className="hero-links">
         <a className="primary-action" href={`mailto:${site.profile.email}`}>
           <Mail size={18} aria-hidden="true" />
@@ -398,9 +401,39 @@ function SectionHeading({ icon, title }: { icon: ReactNode; title: string }) {
   return (
     <div className="section-heading">
       <span aria-hidden="true">{icon}</span>
-      <h2>{title}</h2>
+      <h2>{formatScientificText(title)}</h2>
     </div>
   );
+}
+
+function formatScientificText(text: string): ReactNode {
+  const tokens = ["PM2.5", ...boldPhrases];
+  const pattern = new RegExp(`(${tokens.map(escapeRegExp).join("|")})`, "g");
+  const parts = text.split(pattern).filter(Boolean);
+
+  if (parts.length === 1 && parts[0] === text) {
+    return text;
+  }
+
+  return parts.map((part, index) => {
+    if (part === "PM2.5") {
+      return (
+        <Fragment key={`${part}-${index}`}>
+          PM<sub>2.5</sub>
+        </Fragment>
+      );
+    }
+
+    if (boldPhrases.includes(part)) {
+      return <strong key={`${part}-${index}`}>{part}</strong>;
+    }
+
+    return <Fragment key={`${part}-${index}`}>{part}</Fragment>;
+  });
+}
+
+function escapeRegExp(text: string) {
+  return text.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
 function AmbientBlobs() {
