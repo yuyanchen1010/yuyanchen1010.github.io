@@ -248,7 +248,7 @@ export const content: Record<Language, SiteContent> = {
     projects: [
       {
         title: "Unravelling the Differentiated Effects of the Block Built Environment on PM2.5 Concentrations: A New Research Framework based on the Perspective of Source–Flow–Sink",
-        meta: "Paper 01 / Sustainable Cities and Society",
+        meta: "Paper 01 / Sustainable Cities and Society / under review",
         type: "First Author",
         description:
           "以武汉街区为对象，构建 Source-Flow-Sink 框架，结合 XGBoost 降尺度、SOM 聚类、GWRF-SHAP、ALE、pSEM 与 Bayesian networks，解释建成环境对 PM2.5 风险的过程耦合机制。",
@@ -258,7 +258,7 @@ export const content: Record<Language, SiteContent> = {
       },
       {
         title: "Street-view-derived visible green-space configuration for block-scale PM2.5 analysis: A comparable 2D–3D framework from Wuhan, China",
-        meta: "Paper 02 / Remote Sensing of Environment",
+        meta: "Paper 02 / Remote Sensing of Environment / 拟投稿",
         type: "Second Author",
         description:
           "建立可比较的 2D-3D 绿色空间格局指标框架，评估二维水平绿地与街景可见绿地配置对武汉街区 PM2.5 的贡献差异、空间异质性与非线性响应。",
@@ -552,7 +552,7 @@ export const content: Record<Language, SiteContent> = {
     projects: [
       {
         title: "Unravelling the Differentiated Effects of the Block Built Environment on PM2.5 Concentrations: A New Research Framework based on the Perspective of Source–Flow–Sink",
-        meta: "Paper 01 / Sustainable Cities and Society",
+        meta: "Paper 01 / Sustainable Cities and Society / under review",
         type: "First Author",
         description:
           "A Source-Flow-Sink framework for Wuhan blocks, integrating XGBoost downscaling, SOM clustering, GWRF-SHAP, ALE, pSEM, and Bayesian networks to explain coupled built-environment mechanisms of PM2.5 risk.",
@@ -562,7 +562,7 @@ export const content: Record<Language, SiteContent> = {
       },
       {
         title: "Street-view-derived visible green-space configuration for block-scale PM2.5 analysis: A comparable 2D–3D framework from Wuhan, China",
-        meta: "Paper 02 / Remote Sensing of Environment",
+        meta: "Paper 02 / Remote Sensing of Environment / planned submission",
         type: "Second Author",
         description:
           "A comparable 2D-3D green-space configuration framework for Wuhan blocks, evaluating contributions, spatial heterogeneity, and nonlinear responses of horizontal and street-view-visible greenery to PM2.5.",
