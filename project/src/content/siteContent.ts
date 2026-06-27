@@ -136,6 +136,11 @@ const conferenceImages = {
   planning2025: "/materials/conferences/planning2025-shenyang.jpg",
   landscape2024: "/materials/conferences/landscape2024-shenzhen.jpg",
   landscape2025: "/materials/conferences/landscape2025-kunming.jpg",
+  workshop2024: [
+    "/materials/conferences/child-friendly-campus-certificate.jpg",
+    "/materials/conferences/child-friendly-campus-group.jpg",
+    "/materials/conferences/child-friendly-campus-workshop.jpg",
+  ],
 };
 
 const workImages = {
@@ -155,6 +160,9 @@ const workImages = {
     "/materials/works/asla2025-3.jpg",
   ],
 };
+
+const googleScholarUrl =
+  "https://scholar.google.com/citations?hl=en&user=NJkzaIcAAAAJ&view_op=list_works&citft=1&citft=2&citft=3&email_for_op=ooooofset%40gmail.com&authuser=1&gmla=ACrTK9XhUHBjkyXvR6AljuG2Uw6SPZ6r-rbo93cKMHRmsbjDwNWOebaaQcVk4YvnuELjG3p0-sTNW0pGwYf88wY34CEbEvcTV4ZCMUK7wlCTrR56lSgPQIPIuNw1PT9EKq9NJx-C9HdsaDkGPRqO6enNX2StdXhowH8bbiK8E2m7anlo6jDtq3Z3Wu-YI5E2wFcdWuvlRvq5TlICXysYQ8JGNqgtwDlgCPkPXN58YX-lxHVLLabTDyPV0UXRAVijjjw";
 
 export const content: Record<Language, SiteContent> = {
   zh: {
@@ -181,7 +189,7 @@ export const content: Record<Language, SiteContent> = {
       contactLabel: "联系我",
       links: [
         { label: "GitHub", href: "https://github.com/", icon: "github" },
-        { label: "Google Scholar", href: "https://scholar.google.com/", icon: "scholar" },
+        { label: "Google Scholar", href: googleScholarUrl, icon: "scholar" },
         { label: "LinkedIn", href: "https://www.linkedin.com/", icon: "linkedin" },
       ],
     },
@@ -257,8 +265,8 @@ export const content: Record<Language, SiteContent> = {
         links: [{ label: "Figure", href: researchImages.lczpm }],
       },
       {
-        title: "Street-view-derived visible green-space configuration for block-scale PM2.5 analysis: A comparable 2D–3D framework from Wuhan, China",
-        meta: "Paper 02 / Remote Sensing of Environment / 拟投稿",
+        title: "A Pedestrian-Perspective 2D–3D-Visible Framework for Assessing Block-Scale Associations Between Green-Space Configuration and PM2.5",
+        meta: "Paper 02 / Environmental Impact Assessment Review / with editor",
         type: "Second Author",
         description:
           "建立可比较的 2D-3D 绿色空间格局指标框架，评估二维水平绿地与街景可见绿地配置对武汉街区 PM2.5 的贡献差异、空间异质性与非线性响应。",
@@ -269,12 +277,15 @@ export const content: Record<Language, SiteContent> = {
       {
         title: "From Green Space to Park-Based Cooxling Potential: Performance-Weighted Walkable Access to Urban Park Cooling in Detroit",
         meta: "Paper 03 / Sustainable Cities and Society, accepted",
-        type: "Second Author",
+        type: "Research Assistant (Online)",
         description:
           "以底特律为案例，将公园冷却强度、步行网络可达性和社会空间脆弱性结合，构建 Walkable Cooling Access Index，识别步行冷却沙漠与局部冷却绿洲。",
         tags: ["Urban Heat", "Park Cooling", "Walkability", "Detroit"],
         image: { src: researchImages.coolingThumb, alt: "Cooling03 research figure" },
-        links: [{ label: "Figure", href: researchImages.cooling }],
+        links: [
+          { label: "Article homepage", href: "https://www.sciencedirect.com/science/article/pii/S2210670726004865" },
+          { label: "Figure", href: researchImages.cooling },
+        ],
       },
       {
         title: "城市绿色空间多维属性对“降碳减污”效益的协同与权衡关系——以武汉市主城区街区单元为例",
@@ -355,6 +366,17 @@ export const content: Record<Language, SiteContent> = {
       },
     ],
     activities: [
+      {
+        title: "儿童友好&校园景观中英联合工作营",
+        meta: "2024.10.19-10.23 / 华中科技大学 × University of Sheffield",
+        type: "International Workshop",
+        description: "参与华中科技大学与谢菲尔德大学联合举办的“儿童友好&校园景观”中英联合工作营，围绕儿童友好校园景观设计开展跨文化协作学习，并获评优秀营员。",
+        tags: ["Child-Friendly Campus", "University of Sheffield", "International Workshop", "优秀营员"],
+        gallery: conferenceImages.workshop2024.map((src, index) => ({
+          src,
+          alt: `儿童友好&校园景观中英联合工作营照片 ${index + 1}`,
+        })),
+      },
       {
         title: "第十六届视觉与学习青年学者研讨会（VALSE 2026）",
         meta: "2026.05.08-05.10 / 武汉国际会议中心",
@@ -458,6 +480,7 @@ export const content: Record<Language, SiteContent> = {
     skills: [
       { title: "空间分析", description: "熟练使用 ArcGIS/QGIS、ENVI、InVEST、Fragstats、Guidos、GeoDa。" },
       { title: "算法建模", description: "基本掌握 Python、MATLAB、SPSS、机器学习算法、MGWR 及 CiteSpace 的使用，熟练使用 Cursor、Codex 等 AI 编程工具。" },
+      { title: "学术写作与排版", description: "具备高质量中英文论文写作能力，能够使用 LaTeX 进行学术论文、简历与申请材料排版。" },
       { title: "专业素养", description: "具备独立构建研究框架、多源大数据处理及高质量中英文学术论文撰写能力。" },
     ],
   },
@@ -485,7 +508,7 @@ export const content: Record<Language, SiteContent> = {
       contactLabel: "Contact",
       links: [
         { label: "GitHub", href: "https://github.com/", icon: "github" },
-        { label: "Google Scholar", href: "https://scholar.google.com/", icon: "scholar" },
+        { label: "Google Scholar", href: googleScholarUrl, icon: "scholar" },
         { label: "LinkedIn", href: "https://www.linkedin.com/", icon: "linkedin" },
       ],
     },
@@ -561,8 +584,8 @@ export const content: Record<Language, SiteContent> = {
         links: [{ label: "Figure", href: researchImages.lczpm }],
       },
       {
-        title: "Street-view-derived visible green-space configuration for block-scale PM2.5 analysis: A comparable 2D–3D framework from Wuhan, China",
-        meta: "Paper 02 / Remote Sensing of Environment / planned submission",
+        title: "A Pedestrian-Perspective 2D–3D-Visible Framework for Assessing Block-Scale Associations Between Green-Space Configuration and PM2.5",
+        meta: "Paper 02 / Environmental Impact Assessment Review / with editor",
         type: "Second Author",
         description:
           "A comparable 2D-3D green-space configuration framework for Wuhan blocks, evaluating contributions, spatial heterogeneity, and nonlinear responses of horizontal and street-view-visible greenery to PM2.5.",
@@ -573,12 +596,15 @@ export const content: Record<Language, SiteContent> = {
       {
         title: "From Green Space to Park-Based Cooxling Potential: Performance-Weighted Walkable Access to Urban Park Cooling in Detroit",
         meta: "Paper 03 / Sustainable Cities and Society, accepted",
-        type: "Second Author",
+        type: "Research Assistant (Online)",
         description:
           "A Detroit case study combining park cooling intensity, pedestrian accessibility, and socio-spatial vulnerability to identify walkable cooling deserts and localized cooling oases.",
         tags: ["Urban Heat", "Park Cooling", "Walkability", "Detroit"],
         image: { src: researchImages.coolingThumb, alt: "Cooling03 research figure" },
-        links: [{ label: "Figure", href: researchImages.cooling }],
+        links: [
+          { label: "Article homepage", href: "https://www.sciencedirect.com/science/article/pii/S2210670726004865" },
+          { label: "Figure", href: researchImages.cooling },
+        ],
       },
       {
         title: "城市绿色空间多维属性对“降碳减污”效益的协同与权衡关系——以武汉市主城区街区单元为例",
@@ -659,6 +685,17 @@ export const content: Record<Language, SiteContent> = {
       },
     ],
     activities: [
+      {
+        title: "Child-Friendly Campus Landscape Design Workshop",
+        meta: "Oct 19-23, 2024 / Huazhong University of Science and Technology × University of Sheffield",
+        type: "International Workshop",
+        description: "Participated in the Child-Friendly Campus Landscape Design Workshop jointly organized by Huazhong University of Science and Technology and the University of Sheffield, engaging in cross-cultural collaborative learning on child-friendly campus landscape design and receiving the Outstanding Camper certificate.",
+        tags: ["Child-Friendly Campus", "University of Sheffield", "International Workshop", "Outstanding Camper"],
+        gallery: conferenceImages.workshop2024.map((src, index) => ({
+          src,
+          alt: `Child-Friendly Campus Landscape Design Workshop photo ${index + 1}`,
+        })),
+      },
       {
         title: "16th Vision And Learning SEminar (VALSE 2026)",
         meta: "May 8-10, 2026 / Wuhan International Conference Center",
@@ -760,7 +797,8 @@ export const content: Record<Language, SiteContent> = {
     skills: [
       { title: "Spatial Analysis", description: "Skilled in ArcGIS/QGIS, ENVI, InVEST, Fragstats, Guidos, and GeoDa." },
       { title: "Algorithmic Modeling", description: "Basic proficiency in Python, MATLAB, SPSS, machine learning algorithms, MGWR, and CiteSpace; experienced with AI programming tools such as Cursor and Codex." },
-      { title: "Research Competence", description: "Able to independently build research frameworks, process multi-source big data, and write high-quality Chinese and English academic papers." },
+      { title: "Academic Writing & Typesetting", description: "Able to write high-quality Chinese and English academic papers and use LaTeX for papers, CVs, and application materials." },
+      { title: "Research Competence", description: "Able to independently build research frameworks and process multi-source big data." },
     ],
   },
 };
