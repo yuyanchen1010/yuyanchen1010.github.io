@@ -277,7 +277,7 @@ export const content: Record<Language, SiteContent> = {
       {
         title: "From Green Space to Park-Based Cooxling Potential: Performance-Weighted Walkable Access to Urban Park Cooling in Detroit",
         meta: "Paper 03 / Sustainable Cities and Society, accepted",
-        type: "Research Assistant (Online)",
+        type: "Online Research Assistant",
         description:
           "以底特律为案例，将公园冷却强度、步行网络可达性和社会空间脆弱性结合，构建 Walkable Cooling Access Index，识别步行冷却沙漠与局部冷却绿洲。",
         tags: ["Urban Heat", "Park Cooling", "Walkability", "Detroit"],
@@ -450,7 +450,7 @@ export const content: Record<Language, SiteContent> = {
       },
     ],
     news: [
-      { date: "2026.06", text: "以第二作者身份（老师一作）在《Sustainable Cities and Society》期刊投稿的论文《From Green Space to Park-Based Cooxling Potential: Performance-Weighted Walkable Access to Urban Park Cooling in Detroit》被顺利接收。" },
+      { date: "2026.06", text: "以第二作者及 online Research Assistant 身份参与的论文《From Green Space to Park-Based Cooxling Potential: Performance-Weighted Walkable Access to Urban Park Cooling in Detroit》被《Sustainable Cities and Society》顺利接收。" },
       { date: "2025.11", text: "以第一作者身份在中国风景园林年会上发表论文《基于空间计量的文化遗产廊道构建研究——以大理市为例》并参会。" },
       { date: "2025.08", text: "以第一作者身份在中国城市规划年会上发表 poster《基于滞尘模型的绿色空间格局对PM2.5影响研究》并参会。" },
     ],
@@ -596,7 +596,7 @@ export const content: Record<Language, SiteContent> = {
       {
         title: "From Green Space to Park-Based Cooxling Potential: Performance-Weighted Walkable Access to Urban Park Cooling in Detroit",
         meta: "Paper 03 / Sustainable Cities and Society, accepted",
-        type: "Research Assistant (Online)",
+        type: "Online Research Assistant",
         description:
           "A Detroit case study combining park cooling intensity, pedestrian accessibility, and socio-spatial vulnerability to identify walkable cooling deserts and localized cooling oases.",
         tags: ["Urban Heat", "Park Cooling", "Walkability", "Detroit"],
@@ -769,7 +769,7 @@ export const content: Record<Language, SiteContent> = {
       },
     ],
     news: [
-      { date: "Jun 2026", text: "The paper From Green Space to Park-Based Cooxling Potential: Performance-Weighted Walkable Access to Urban Park Cooling in Detroit, submitted to Sustainable Cities and Society with me as second author and my supervisor as first author, was accepted." },
+      { date: "Jun 2026", text: "The paper From Green Space to Park-Based Cooxling Potential: Performance-Weighted Walkable Access to Urban Park Cooling in Detroit, with me as second author and online Research Assistant, was accepted by Sustainable Cities and Society." },
       { date: "Nov 2025", text: "Presented the first-author paper Construction of Cultural Heritage Corridors Based on Spatial Econometrics: A Case Study of Dali at the Chinese Landscape Architecture Annual Conference." },
       { date: "Aug 2025", text: "Presented the first-author poster Effects of Green Space Pattern on PM2.5 Based on a Dust Retention Model at the Annual National Planning Conference." },
     ],
