@@ -66,7 +66,6 @@ export type SiteContent = {
   };
   sections: {
     about: string;
-    research: string;
     education: string;
     projects: string;
     academic: string;
@@ -81,10 +80,6 @@ export type SiteContent = {
     short: string[];
     long: string[];
   };
-  researchInterests: {
-    title: string;
-    description: string;
-  }[];
   education: TimelineItem[];
   projects: CardItem[];
   academicExperience: CardItem[];
@@ -203,7 +198,6 @@ export const content: Record<Language, SiteContent> = {
     },
     sections: {
       about: "自我介绍",
-      research: "研究兴趣",
       education: "教育背景",
       projects: "科研经历 / 论文",
       academic: "学术经历",
@@ -225,20 +219,6 @@ export const content: Record<Language, SiteContent> = {
         "这个网站用于集中呈现我的个人背景、论文进展、图示材料与后续申请资料。研究经历中的条目已按照材料文件名后缀编号配对整理，同一编号对应同一篇论文或会议稿。",
       ],
     },
-    researchInterests: [
-      {
-        title: "Urban Form & Low-Carbon Communities",
-        description: "利用多源城市大数据，研究城市形态、住房空置、土地利用效率与碳排放之间的耦合关系",
-      },
-      {
-        title: "LLMs & Human-Scale Urban Perception",
-        description: "研究大语言模型、街景感知与公众环境感知数据在城市环境评价中的应用",
-      },
-      {
-        title: "Urban Climate Risk & Policy-Oriented Planning",
-        description: "研究极端高温、空气污染与社会脆弱性叠加下的城市健康风险，并构建面向气候适应和城市更新的决策支持方法。",
-      },
-    ],
     education: [
       {
         title: "华中科技大学",
@@ -275,7 +255,7 @@ export const content: Record<Language, SiteContent> = {
         links: [{ label: "Figure", href: researchImages.gvipm }],
       },
       {
-        title: "From Green Space to Park-Based Cooxling Potential: Performance-Weighted Walkable Access to Urban Park Cooling in Detroit",
+        title: "From Green Space to Park-Based Cooling Potential: Performance-Weighted Walkable Access to Urban Park Cooling in Detroit",
         meta: "Paper 03 / Sustainable Cities and Society, accepted",
         type: "Online Research Assistant",
         description:
@@ -450,7 +430,7 @@ export const content: Record<Language, SiteContent> = {
       },
     ],
     news: [
-      { date: "2026.06", text: "以第二作者及 online Research Assistant 身份参与的论文《From Green Space to Park-Based Cooxling Potential: Performance-Weighted Walkable Access to Urban Park Cooling in Detroit》被《Sustainable Cities and Society》顺利接收。" },
+      { date: "2026.06", text: "以第二作者及 online Research Assistant 身份参与的论文《From Green Space to Park-Based Cooling Potential: Performance-Weighted Walkable Access to Urban Park Cooling in Detroit》被《Sustainable Cities and Society》顺利接收。" },
       { date: "2025.11", text: "以第一作者身份在中国风景园林年会上发表论文《基于空间计量的文化遗产廊道构建研究——以大理市为例》并参会。" },
       { date: "2025.08", text: "以第一作者身份在中国城市规划年会上发表 poster《基于滞尘模型的绿色空间格局对PM2.5影响研究》并参会。" },
     ],
@@ -522,7 +502,6 @@ export const content: Record<Language, SiteContent> = {
     },
     sections: {
       about: "Self Introduction",
-      research: "Research Interests",
       education: "Education",
       projects: "Research Experience / Papers",
       academic: "Academic Experience",
@@ -544,20 +523,6 @@ export const content: Record<Language, SiteContent> = {
         "This website organizes my profile, research pipeline, figures, and application materials. Research items are matched by the filename suffix numbers in the materials folder; the same suffix indicates the same paper or conference submission.",
       ],
     },
-    researchInterests: [
-      {
-        title: "Urban Form & Low-Carbon Communities",
-        description: "Using multi-source urban big data to study coupled relationships among urban form, housing vacancy, land-use efficiency, and carbon emissions.",
-      },
-      {
-        title: "LLMs & Human-Scale Urban Perception",
-        description: "Studying applications of large language models, street-view perception, and public environmental perception data in urban environmental evaluation.",
-      },
-      {
-        title: "Urban Climate Risk & Policy-Oriented Planning",
-        description: "Studying urban health risks under overlapping extreme heat, air pollution, and social vulnerability, and building decision-support methods for climate adaptation and urban renewal.",
-      },
-    ],
     education: [
       {
         title: "Huazhong University of Science and Technology",
@@ -594,7 +559,7 @@ export const content: Record<Language, SiteContent> = {
         links: [{ label: "Figure", href: researchImages.gvipm }],
       },
       {
-        title: "From Green Space to Park-Based Cooxling Potential: Performance-Weighted Walkable Access to Urban Park Cooling in Detroit",
+        title: "From Green Space to Park-Based Cooling Potential: Performance-Weighted Walkable Access to Urban Park Cooling in Detroit",
         meta: "Paper 03 / Sustainable Cities and Society, accepted",
         type: "Online Research Assistant",
         description:
@@ -769,7 +734,7 @@ export const content: Record<Language, SiteContent> = {
       },
     ],
     news: [
-      { date: "Jun 2026", text: "The paper From Green Space to Park-Based Cooxling Potential: Performance-Weighted Walkable Access to Urban Park Cooling in Detroit, with me as second author and online Research Assistant, was accepted by Sustainable Cities and Society." },
+      { date: "Jun 2026", text: "The paper From Green Space to Park-Based Cooling Potential: Performance-Weighted Walkable Access to Urban Park Cooling in Detroit, with me as second author and online Research Assistant, was accepted by Sustainable Cities and Society." },
       { date: "Nov 2025", text: "Presented the first-author paper Construction of Cultural Heritage Corridors Based on Spatial Econometrics: A Case Study of Dali at the Chinese Landscape Architecture Annual Conference." },
       { date: "Aug 2025", text: "Presented the first-author poster Effects of Green Space Pattern on PM2.5 Based on a Dust Retention Model at the Annual National Planning Conference." },
     ],

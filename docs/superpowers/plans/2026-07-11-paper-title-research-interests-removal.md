@@ -247,7 +247,7 @@ Run these checks:
 rg -n 'Cooxling|Research Interests|研究兴趣|researchInterests|InterestSection|\.interest-grid|\.organic-card' project/src project/dist/assets
 $source = Get-Content -Raw -Encoding utf8 'project/src/content/siteContent.ts'
 $title = 'From Green Space to Park-Based Cooling Potential: Performance-Weighted Walkable Access to Urban Park Cooling in Detroit'
-if (($source.Split($title).Count - 1) -ne 4) { throw 'Canonical Paper 03 title count is not four' }
+if ([regex]::Matches($source, [regex]::Escape($title)).Count -ne 4) { throw 'Canonical Paper 03 title count is not four' }
 rg -F $title project/dist/assets
 ```
 

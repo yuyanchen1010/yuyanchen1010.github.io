@@ -378,13 +378,6 @@ li + li {
   font-size: 1.03rem;
 }
 
-.interest-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
-}
-
-.organic-card,
 .project-card,
 .skill-group {
   border: 1px solid rgba(222, 216, 207, 0.7);
@@ -395,26 +388,11 @@ li + li {
     box-shadow 240ms ease;
 }
 
-.organic-card {
-  padding: 20px;
-  border-radius: 28px 20px 36px 22px;
-}
-
-.organic-card:nth-child(2) {
-  border-radius: 20px 36px 24px 40px;
-}
-
-.organic-card:nth-child(3) {
-  border-radius: 34px 22px 20px 38px;
-}
-
-.organic-card:hover,
 .project-card:hover {
   transform: translateY(-3px);
   box-shadow: 0 22px 46px -28px rgba(93, 112, 82, 0.7);
 }
 
-.organic-card h3,
 .timeline-item h3,
 .project-card h3,
 .skill-group h3 {
@@ -422,7 +400,6 @@ li + li {
   line-height: 1.2;
 }
 
-.organic-card p,
 .timeline-item p,
 .project-card p {
   margin-top: 8px;
@@ -726,7 +703,6 @@ li + li {
     grid-column: 1 / -1;
   }
 
-  .interest-grid,
   .skill-grid {
     grid-template-columns: 1fr;
   }

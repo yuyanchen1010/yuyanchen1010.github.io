@@ -176,7 +176,6 @@ function HomePage({ site }: { language: Language; site: SiteContent }) {
       </section>
 
       <TextSection icon={<Microscope />} title={site.sections.about} paragraphs={site.about.short} />
-      <InterestSection title={site.sections.research} interests={site.researchInterests} />
       <EducationSection title={site.sections.education} education={site.education} />
       <CardSection icon={<BriefcaseBusiness />} title={site.sections.projects} items={site.projects} id="projects" />
       <CardSection icon={<BookOpen />} title={site.sections.academic} items={[...site.academicExperience, ...site.activities]} />
@@ -236,28 +235,6 @@ function TextSection({
       <div className="text-flow">
         {paragraphs.map((paragraph) => (
           <p key={paragraph}>{formatScientificText(paragraph)}</p>
-        ))}
-      </div>
-    </section>
-  );
-}
-
-function InterestSection({
-  title,
-  interests,
-}: {
-  title: string;
-  interests: { title: string; description: string }[];
-}) {
-  return (
-    <section className="section-card">
-      <SectionHeading icon={<Sparkles />} title={title} />
-      <div className="interest-grid">
-        {interests.map((interest) => (
-          <article className="organic-card" key={interest.title}>
-            <h3>{formatScientificText(interest.title)}</h3>
-            <p>{formatScientificText(interest.description)}</p>
-          </article>
         ))}
       </div>
     </section>
