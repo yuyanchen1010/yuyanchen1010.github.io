@@ -339,10 +339,10 @@ export const content: Record<Language, SiteContent> = {
       },
       {
         title: "竞赛经历",
-        meta: "2022 - 2025",
+        meta: "2022 - 2026",
         type: "竞赛经历",
-        description: "2025.07-2025.12：2025 园冶杯大学生国际竞赛二等奖（1/3）。\n2025.02-2025.03：世界人居建筑与环境设计大赛银奖（1/5）。\n2023.02-2023.06：2023 园冶杯大学生国际竞赛荣誉奖（1/1）。\n2022.05-2022.06：2022 园冶杯大学生国际竞赛荣誉奖（4/5）。",
-        tags: ["园冶杯", "二等奖", "银奖", "荣誉奖"],
+        description: "2026：2026 IFLA 全球风景园林奖｜学生组“城市健康与福祉”类别全球三强入围，Finalist (Top 3 Worldwide), Student Category—Urban Health and Well-being，项目 Greenery and Wind: Landscape Strategies for Air Pollution Mitigation Along the NYC Marathon Route（2/7）。\n2025.07-2025.12：2025 园冶杯大学生国际竞赛二等奖（1/3）。\n2025.02-2025.03：世界人居建筑与环境设计大赛银奖（1/5）。\n2023.02-2023.06：2023 园冶杯大学生国际竞赛荣誉奖（1/1）。\n2022.05-2022.06：2022 园冶杯大学生国际竞赛荣誉奖（4/5）。",
+        tags: ["IFLA 2026", "Finalist", "Top 3 Worldwide", "园冶杯", "银奖"],
       },
     ],
     activities: [
@@ -408,10 +408,10 @@ export const content: Record<Language, SiteContent> = {
       },
       {
         title: "Greenery and Wind: Landscape Strategies for Air Pollution Mitigation Along the NYC Marathon Route",
-        meta: "IFLA 2026 学生组",
-        type: "Competition Boards",
-        description: "以纽约马拉松路线为对象，提出结合绿化密度、通风空间与灵活绿地系统的空气污染缓解景观策略。",
-        tags: ["IFLA 2026", "Air Pollution", "NYC Marathon"],
+        meta: "2026 IFLA 全球风景园林奖｜学生组“城市健康与福祉”类别",
+        type: "Finalist (Top 3 Worldwide) / 2/7",
+        description: "入围 2026 IFLA 全球风景园林奖学生组“城市健康与福祉”类别全球三强。项目以纽约马拉松路线为对象，提出结合绿化密度、通风空间与灵活绿地系统的空气污染缓解景观策略。",
+        tags: ["IFLA 2026", "Finalist", "Top 3 Worldwide", "Urban Health and Well-being"],
         gallery: workImages.ifla2026.map((src, index) => ({
           src,
           alt: `IFLA 2026 学生组作品图纸 ${index + 1}`,
@@ -430,6 +430,7 @@ export const content: Record<Language, SiteContent> = {
       },
     ],
     news: [
+      { date: "2026.07", text: "作品《Greenery and Wind: Landscape Strategies for Air Pollution Mitigation Along the NYC Marathon Route》入围 2026 IFLA 全球风景园林奖学生组“城市健康与福祉”类别全球三强，获 Finalist (Top 3 Worldwide)，本人排序 2/7。" },
       { date: "2026.06", text: "以第二作者及 online Research Assistant 身份参与的论文《From Green Space to Park-Based Cooling Potential: Performance-Weighted Walkable Access to Urban Park Cooling in Detroit》被《Sustainable Cities and Society》顺利接收。" },
       { date: "2025.11", text: "以第一作者身份在中国风景园林年会上发表论文《基于空间计量的文化遗产廊道构建研究——以大理市为例》并参会。" },
       { date: "2025.08", text: "以第一作者身份在中国城市规划年会上发表 poster《基于滞尘模型的绿色空间格局对PM2.5影响研究》并参会。" },
@@ -643,10 +644,10 @@ export const content: Record<Language, SiteContent> = {
       },
       {
         title: "Competition experience",
-        meta: "2022 - 2025",
+        meta: "2022 - 2026",
         type: "Competition",
-        description: "Jul 2025-Dec 2025: Second Prize in the 2025 Yuan Ye Awards International Student Competition (1/3).\nFeb 2025-Mar 2025: Silver Prize in the World Habitat Architecture and Environment Design Competition (1/5).\nFeb 2023-Jun 2023: Honor Award in the 2023 Yuan Ye Awards International Student Competition (1/1).\nMay 2022-Jun 2022: Honor Award in the 2022 Yuan Ye Awards International Student Competition (4/5).",
-        tags: ["Yuan Ye Awards", "Second Prize", "Silver Prize", "Honor Award"],
+        description: "2026: Finalist (Top 3 Worldwide), Student Category—Urban Health and Well-being, IFLA Global Landscape Architecture Awards 2026, for Greenery and Wind: Landscape Strategies for Air Pollution Mitigation Along the NYC Marathon Route (2/7).\nJul 2025-Dec 2025: Second Prize in the 2025 Yuan Ye Awards International Student Competition (1/3).\nFeb 2025-Mar 2025: Silver Prize in the World Habitat Architecture and Environment Design Competition (1/5).\nFeb 2023-Jun 2023: Honor Award in the 2023 Yuan Ye Awards International Student Competition (1/1).\nMay 2022-Jun 2022: Honor Award in the 2022 Yuan Ye Awards International Student Competition (4/5).",
+        tags: ["IFLA 2026", "Finalist", "Top 3 Worldwide", "Yuan Ye Awards", "Silver Prize"],
       },
     ],
     activities: [
@@ -712,10 +713,10 @@ export const content: Record<Language, SiteContent> = {
       },
       {
         title: "Greenery and Wind: Landscape Strategies for Air Pollution Mitigation Along the NYC Marathon Route",
-        meta: "IFLA 2026 Student Category",
-        type: "Competition Boards",
-        description: "A landscape strategy proposal for the NYC Marathon route, integrating vegetation density, ventilation spaces, and flexible green-space systems for air-pollution mitigation.",
-        tags: ["IFLA 2026", "Air Pollution", "NYC Marathon"],
+        meta: "IFLA Global Landscape Architecture Awards 2026 / Student Category—Urban Health and Well-being",
+        type: "Finalist (Top 3 Worldwide) / 2/7",
+        description: "Finalist (Top 3 Worldwide) in the Student Category—Urban Health and Well-being at the IFLA Global Landscape Architecture Awards 2026. The project proposes landscape strategies for air-pollution mitigation along the NYC Marathon route.",
+        tags: ["IFLA 2026", "Finalist", "Top 3 Worldwide", "Urban Health and Well-being"],
         gallery: workImages.ifla2026.map((src, index) => ({
           src,
           alt: `IFLA 2026 student category board ${index + 1}`,
@@ -734,6 +735,7 @@ export const content: Record<Language, SiteContent> = {
       },
     ],
     news: [
+      { date: "Jul 2026", text: "Greenery and Wind: Landscape Strategies for Air Pollution Mitigation Along the NYC Marathon Route was named Finalist (Top 3 Worldwide) in the Student Category—Urban Health and Well-being at the IFLA Global Landscape Architecture Awards 2026; my contribution order was 2/7." },
       { date: "Jun 2026", text: "The paper From Green Space to Park-Based Cooling Potential: Performance-Weighted Walkable Access to Urban Park Cooling in Detroit, with me as second author and online Research Assistant, was accepted by Sustainable Cities and Society." },
       { date: "Nov 2025", text: "Presented the first-author paper Construction of Cultural Heritage Corridors Based on Spatial Econometrics: A Case Study of Dali at the Chinese Landscape Architecture Annual Conference." },
       { date: "Aug 2025", text: "Presented the first-author poster Effects of Green Space Pattern on PM2.5 Based on a Dust Retention Model at the Annual National Planning Conference." },
