@@ -236,7 +236,7 @@ export const content: Record<Language, SiteContent> = {
     projects: [
       {
         title: "Unravelling the Differentiated Effects of the Block Built Environment on PM2.5 Concentrations: A New Research Framework based on the Perspective of Source–Flow–Sink",
-        meta: "Paper 01 / Sustainable Cities and Society / under review",
+        meta: "Paper 01 / Sustainable Cities and Society / Under Revision",
         type: "First Author",
         description:
           "以武汉街区为对象，构建 Source-Flow-Sink 框架，结合 XGBoost 降尺度、SOM 聚类、GWRF-SHAP、ALE、pSEM 与 Bayesian networks，解释建成环境对 PM2.5 风险的过程耦合机制。",
@@ -541,7 +541,7 @@ export const content: Record<Language, SiteContent> = {
     projects: [
       {
         title: "Unravelling the Differentiated Effects of the Block Built Environment on PM2.5 Concentrations: A New Research Framework based on the Perspective of Source–Flow–Sink",
-        meta: "Paper 01 / Sustainable Cities and Society / under review",
+        meta: "Paper 01 / Sustainable Cities and Society / Under Revision",
         type: "First Author",
         description:
           "A Source-Flow-Sink framework for Wuhan blocks, integrating XGBoost downscaling, SOM clustering, GWRF-SHAP, ALE, pSEM, and Bayesian networks to explain coupled built-environment mechanisms of PM2.5 risk.",
