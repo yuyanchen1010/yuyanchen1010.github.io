@@ -245,8 +245,8 @@ export const content: Record<Language, SiteContent> = {
         links: [{ label: "Figure", href: researchImages.lczpm }],
       },
       {
-        title: "From Horizontal Patterns to Pedestrian Views: Nonlinear Effects of Block-Scale Green Space Configuration on PM2.5 in Wuhan, China",
-        meta: "Paper 02 / Urban Climate / with editor",
+        title: "A Pedestrian-Perspective 2D-3D-Visible Indicator Framework for Quantifying Nonlinear PM2.5 Responses to Block -Scale Green Space Configuration",
+        meta: "Paper 02 / Ecological Indicators / With Editor",
         type: "Second Author",
         description:
           "建立可比较的 2D-3D 绿色空间格局指标框架，评估二维水平绿地与街景可见绿地配置对武汉街区 PM2.5 的贡献差异、空间异质性与非线性响应。",
@@ -550,8 +550,8 @@ export const content: Record<Language, SiteContent> = {
         links: [{ label: "Figure", href: researchImages.lczpm }],
       },
       {
-        title: "From Horizontal Patterns to Pedestrian Views: Nonlinear Effects of Block-Scale Green Space Configuration on PM2.5 in Wuhan, China",
-        meta: "Paper 02 / Urban Climate / with editor",
+        title: "A Pedestrian-Perspective 2D-3D-Visible Indicator Framework for Quantifying Nonlinear PM2.5 Responses to Block -Scale Green Space Configuration",
+        meta: "Paper 02 / Ecological Indicators / With Editor",
         type: "Second Author",
         description:
           "A comparable 2D-3D green-space configuration framework for Wuhan blocks, evaluating contributions, spatial heterogeneity, and nonlinear responses of horizontal and street-view-visible greenery to PM2.5.",
