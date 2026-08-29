@@ -183,7 +183,7 @@ export const content: Record<Language, SiteContent> = {
       cvLabel: "下载 CV",
       contactLabel: "联系我",
       links: [
-        { label: "GitHub", href: "https://github.com/", icon: "github" },
+        { label: "GitHub", href: "https://github.com/yuyanchen1010", icon: "github" },
         { label: "Google Scholar", href: googleScholarUrl, icon: "scholar" },
         { label: "LinkedIn", href: "https://www.linkedin.com/", icon: "linkedin" },
       ],
@@ -211,7 +211,7 @@ export const content: Record<Language, SiteContent> = {
     about: {
       short: [
         "我叫陈玉妍，23 岁，来自湖北武汉。本科毕业于北京林业大学风景园林专业，目前为华中科技大学风景园林专业硕士研究生，预计 2027 年 6 月毕业，师从戴菲老师。",
-        "我的本科绩点为 90.37/100，排名 5/122；研究生阶段排名 3/18。英语方面，CET-6 为 577 分，CET-4 为 607 分，并具备较好的学术沟通与写作基础。",
+        "我的本科绩点为 90.37/100，排名 5/122；研究生阶段排名 3/18。英语方面，雅思 7.5 分，CET-6 为 577 分，CET-4 为 607 分，并具备较好的学术沟通与写作基础。",
       ],
       long: [
         "我接受过系统的风景园林与规划训练，同时持续积累 GIS 空间分析、遥感反演、街景图像解析、机器学习解释模型和学术写作经验。当前研究多围绕城市绿色空间在空气污染削减、碳汇协同、热风险缓解与步行可达性中的作用展开。",
@@ -430,6 +430,7 @@ export const content: Record<Language, SiteContent> = {
       },
     ],
     news: [
+      { date: "2026.08", text: "以总分 7.5 分通过雅思考试，其中听力 7.5 分、阅读 9 分、口语 6.5 分、写作 6.5 分。" },
       { date: "2026.07", text: "作品《Greenery and Wind: Landscape Strategies for Air Pollution Mitigation Along the NYC Marathon Route》入围 2026 IFLA 全球风景园林奖学生组“城市健康与福祉”类别全球三强，获 Finalist (Top 3 Worldwide)，本人排序 2/7。" },
       { date: "2026.06", text: "以第二作者及 online Research Assistant 身份参与的论文《From Green Space to Park-Based Cooling Potential: Performance-Weighted Walkable Access to Urban Park Cooling in Detroit》被《Sustainable Cities and Society》顺利接收。" },
       { date: "2025.11", text: "以第一作者身份在中国风景园林年会上发表论文《基于空间计量的文化遗产廊道构建研究——以大理市为例》并参会。" },
@@ -488,7 +489,7 @@ export const content: Record<Language, SiteContent> = {
       cvLabel: "Download CV",
       contactLabel: "Contact",
       links: [
-        { label: "GitHub", href: "https://github.com/", icon: "github" },
+        { label: "GitHub", href: "https://github.com/yuyanchen1010", icon: "github" },
         { label: "Google Scholar", href: googleScholarUrl, icon: "scholar" },
         { label: "LinkedIn", href: "https://www.linkedin.com/", icon: "linkedin" },
       ],
@@ -516,7 +517,7 @@ export const content: Record<Language, SiteContent> = {
     about: {
       short: [
         "I am Yuyan Chen, 23, from Wuhan, Hubei. I received my undergraduate training in Landscape Architecture at Beijing Forestry University and am now a master's student in Landscape Architecture at Huazhong University of Science and Technology, supervised by Prof. Fei Dai.",
-        "My undergraduate GPA is 90.37/100, ranked 5/122; my current graduate ranking is 3/18. I scored 577 in CET-6 and 607 in CET-4, with strong oral English performance.",
+        "My undergraduate GPA is 90.37/100, ranked 5/122; my current graduate ranking is 3/18. For English proficiency, I achieved an IELTS overall band score of 7.5, followed by CET-6 (577) and CET-4 (607), with a strong foundation in academic communication and writing.",
       ],
       long: [
         "My training spans landscape architecture, planning research, GIS, remote sensing, street-view image analysis, interpretable machine learning, and academic writing. My current work focuses on urban green space, air pollution mitigation, carbon-pollution synergy, heat risk, and walkable accessibility.",
@@ -735,6 +736,7 @@ export const content: Record<Language, SiteContent> = {
       },
     ],
     news: [
+      { date: "Aug 2026", text: "I achieved an IELTS overall band score of 7.5, with 7.5 in Listening, 9.0 in Reading, 6.5 in Speaking, and 6.5 in Writing." },
       { date: "Jul 2026", text: "Greenery and Wind: Landscape Strategies for Air Pollution Mitigation Along the NYC Marathon Route was named Finalist (Top 3 Worldwide) in the Student Category—Urban Health and Well-being at the IFLA Global Landscape Architecture Awards 2026; my contribution order was 2/7." },
       { date: "Jun 2026", text: "The paper From Green Space to Park-Based Cooling Potential: Performance-Weighted Walkable Access to Urban Park Cooling in Detroit, with me as second author and online Research Assistant, was accepted by Sustainable Cities and Society." },
       { date: "Nov 2025", text: "Presented the first-author paper Construction of Cultural Heritage Corridors Based on Spatial Econometrics: A Case Study of Dali at the Chinese Landscape Architecture Annual Conference." },

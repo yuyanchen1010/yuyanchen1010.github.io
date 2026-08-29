@@ -29,6 +29,8 @@ const boldPhrases = [
   "90.37/100",
   "5/122",
   "3/18",
+  "雅思 7.5 分",
+  "IELTS overall band score of 7.5",
   "CET-6 为 577 分",
 ];
 

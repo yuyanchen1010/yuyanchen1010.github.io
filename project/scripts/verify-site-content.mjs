@@ -30,5 +30,10 @@ assert.ok(contentSource.includes(iflaProjectTitle), "IFLA project title must be 
 assert.ok(contentSource.includes("2/7"), "IFLA contribution order must be present");
 assert.ok(contentSource.includes(chineseIflaCompetitionEntry), "Chinese IFLA competition entry must use the requested concise date range");
 assert.ok(contentSource.includes(englishIflaCompetitionEntry), "English IFLA competition entry must use the concise date range");
+assert.ok(contentSource.includes("雅思 7.5 分"), "Chinese introduction must include the IELTS score");
+assert.ok(appSource.includes('"雅思 7.5 分"'), "Chinese IELTS score must be bolded");
+assert.ok(contentSource.includes('{ date: "2026.08"'), "Chinese IELTS news must be the newest item");
+assert.ok(contentSource.includes("听力 7.5 分、阅读 9 分、口语 6.5 分、写作 6.5 分"), "Chinese IELTS section scores must be present");
+assert.equal(contentSource.split("https://github.com/yuyanchen1010").length - 1, 2, "Both language profiles must link to the GitHub account");
 
 console.log("Site content verification passed.");
