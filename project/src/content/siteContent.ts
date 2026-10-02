@@ -1,4 +1,5 @@
 
+
 export type Language = "zh" | "en";
 
 export type ProfileLink = {
@@ -212,7 +213,7 @@ export const content: Record<Language, SiteContent> = {
     about: {
       short: [
         "我叫陈玉妍，23 岁，来自湖北武汉。本科毕业于北京林业大学风景园林专业，目前为华中科技大学风景园林专业硕士研究生，预计 2027 年 6 月毕业，师从戴菲老师。",
-        "我的本科绩点为 90.37/100，排名 5/122；研究生阶段排名 3/18。英语方面，雅思 7.5 分，CET-6 为 577 分，CET-4 为 607 分，并具备较好的学术沟通与写作基础。",
+        "我的本科绩点为 90.37/100，排名 5/122；研究生阶段排名 2/18。英语方面，雅思 7.5 分，CET-6 为 577 分，CET-4 为 607 分，并具备较好的学术沟通与写作基础。",
       ],
       long: [
         "我接受过系统的风景园林与规划训练，同时持续积累 GIS 空间分析、遥感反演、街景图像解析、机器学习解释模型和学术写作经验。当前研究多围绕城市绿色空间在空气污染削减、碳汇协同、热风险缓解与步行可达性中的作用展开。",
@@ -225,7 +226,7 @@ export const content: Record<Language, SiteContent> = {
         title: "华中科技大学",
         subtitle: "风景园林硕士研究生，保研\n师从戴菲教授、陈明老师",
         time: "2024 - 2027 预计",
-        details: ["研究生绩点 3.75/4.00，排名 3/18", "研究方向包括城市绿色空间、环境暴露、GIS 与空间机器学习"],
+        details: ["研究生绩点 3.75/4.00，排名 2/18", "研究方向包括城市绿色空间、环境暴露、GIS 与空间机器学习"],
       },
       {
         title: "北京林业大学",
@@ -518,7 +519,7 @@ export const content: Record<Language, SiteContent> = {
     about: {
       short: [
         "I am Yuyan Chen, 23, from Wuhan, Hubei. I received my undergraduate training in Landscape Architecture at Beijing Forestry University and am now a master's student in Landscape Architecture at Huazhong University of Science and Technology, supervised by Prof. Fei Dai.",
-        "My undergraduate GPA is 90.37/100, ranked 5/122; my current graduate ranking is 3/18. For English proficiency, I achieved an IELTS overall band score of 7.5, followed by CET-6 (577) and CET-4 (607), with a strong foundation in academic communication and writing.",
+        "My undergraduate GPA is 90.37/100, ranked 5/122; my current graduate ranking is 2/18. For English proficiency, I achieved an IELTS overall band score of 7.5, followed by CET-6 (577) and CET-4 (607), with a strong foundation in academic communication and writing.",
       ],
       long: [
         "My training spans landscape architecture, planning research, GIS, remote sensing, street-view image analysis, interpretable machine learning, and academic writing. My current work focuses on urban green space, air pollution mitigation, carbon-pollution synergy, heat risk, and walkable accessibility.",
@@ -531,7 +532,7 @@ export const content: Record<Language, SiteContent> = {
         title: "Huazhong University of Science and Technology",
         subtitle: "Master's Student in Landscape Architecture, recommended admission\nSupervised by Prof. Fei Dai",
         time: "2024 - 2027 expected",
-        details: ["Graduate GPA: 3.75/4.00; rank: 3/18", "Research on urban green space, environmental exposure, GIS, and spatial machine learning"],
+        details: ["Graduate GPA: 3.75/4.00; rank: 2/18", "Research on urban green space, environmental exposure, GIS, and spatial machine learning"],
       },
       {
         title: "Beijing Forestry University",
