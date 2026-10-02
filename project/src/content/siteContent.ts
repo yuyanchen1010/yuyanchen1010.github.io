@@ -223,7 +223,7 @@ export const content: Record<Language, SiteContent> = {
     education: [
       {
         title: "华中科技大学",
-        subtitle: "风景园林硕士研究生，保研\n师从戴菲教授",
+        subtitle: "风景园林硕士研究生，保研\n师从戴菲教授、陈明老师",
         time: "2024 - 2027 预计",
         details: ["研究生绩点 3.75/4.00，排名 3/18", "研究方向包括城市绿色空间、环境暴露、GIS 与空间机器学习"],
       },
