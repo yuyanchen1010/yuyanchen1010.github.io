@@ -179,12 +179,12 @@ function HomePage({ site }: { language: Language; site: SiteContent }) {
 
       <TextSection icon={<Microscope />} title={site.sections.about} paragraphs={site.about.short} />
       <EducationSection title={site.sections.education} education={site.education} />
+      <NewsSection title={site.sections.news} news={site.news} />
       <CardSection icon={<BriefcaseBusiness />} title={site.sections.projects} items={site.projects} id="projects" />
       <CardSection icon={<BookOpen />} title={site.sections.academic} items={[...site.academicExperience, ...site.activities]} />
       <CardSection icon={<Microscope />} title={site.sections.funds} items={site.funds} />
       <CardSection icon={<Award />} title={site.sections.awards} items={site.awards} />
       <CardSection icon={<Palette />} title={site.sections.works} items={site.works} />
-      <NewsSection title={site.sections.news} news={site.news} />
       <ContactSection site={site} />
     </>
   );
