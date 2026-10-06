@@ -136,7 +136,7 @@ function ProfileSidebar({ site }: { site: SiteContent }) {
         <span>{site.profile.phone}</span>
       </div>
       <div className="profile-actions" aria-label={site.profile.linkAria}>
-        <a className="primary-action" href={site.profile.cvUrl}>
+        <a className="primary-action" href={site.profile.cvUrl} download>
           <Download size={17} aria-hidden="true" />
           {site.profile.cvLabel}
         </a>
@@ -367,7 +367,7 @@ function ContactSection({ site }: { site: SiteContent }) {
           <Mail size={18} aria-hidden="true" />
           {site.contact.emailLabel}
         </a>
-        <a className="secondary-action" href={site.profile.cvUrl}>
+        <a className="secondary-action" href={site.profile.cvUrl} download>
           <Download size={18} aria-hidden="true" />
           {site.profile.cvLabel}
         </a>
