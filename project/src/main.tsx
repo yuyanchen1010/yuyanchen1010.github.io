@@ -309,6 +309,7 @@ function CardSection({
               <span className="project-type">{formatScientificText(project.type)}</span>
             </div>
             <h3>{formatScientificText(project.title)}</h3>
+            {project.roleNote && <p className="project-role-note">{formatScientificText(project.roleNote)}</p>}
             <p>{formatScientificText(project.description)}</p>
             <div className="tag-list">
               {project.tags.map((tag) => (

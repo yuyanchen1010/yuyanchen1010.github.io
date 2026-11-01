@@ -516,6 +516,17 @@ li + li {
   font-weight: 900;
 }
 
+.project-card .project-role-note {
+  margin-top: 6px;
+  color: var(--secondary);
+  font-size: 0.92rem;
+  font-weight: 900;
+}
+
+.project-role-note + p {
+  margin-top: 8px;
+}
+
 .tag-list {
   display: flex;
   flex-wrap: wrap;

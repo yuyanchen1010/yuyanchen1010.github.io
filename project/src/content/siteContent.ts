@@ -12,6 +12,7 @@ export type CardItem = {
   title: string;
   meta: string;
   type: string;
+  roleNote?: string;
   description: string;
   tags: string[];
   image?: {
@@ -259,7 +260,8 @@ export const content: Record<Language, SiteContent> = {
       {
         title: "From Green Space to Park-Based Cooling Potential: Performance-Weighted Walkable Access to Urban Park Cooling in Detroit",
         meta: "Paper 03 / Sustainable Cities and Society / Accepted",
-        type: "Online Research Assistant / Second Author",
+        type: "Second Author",
+        roleNote: "Online Research Assistant",
         description:
           "以底特律为案例，将公园冷却强度、步行网络可达性和社会空间脆弱性结合，构建 Walkable Cooling Access Index，识别步行冷却沙漠与局部冷却绿洲。",
         tags: ["Urban Heat", "Park Cooling", "Walkability", "Detroit"],
@@ -565,7 +567,8 @@ export const content: Record<Language, SiteContent> = {
       {
         title: "From Green Space to Park-Based Cooling Potential: Performance-Weighted Walkable Access to Urban Park Cooling in Detroit",
         meta: "Paper 03 / Sustainable Cities and Society / Accepted",
-        type: "Online Research Assistant / Second Author",
+        type: "Second Author",
+        roleNote: "Online Research Assistant",
         description:
           "A Detroit case study combining park cooling intensity, pedestrian accessibility, and socio-spatial vulnerability to identify walkable cooling deserts and localized cooling oases.",
         tags: ["Urban Heat", "Park Cooling", "Walkability", "Detroit"],

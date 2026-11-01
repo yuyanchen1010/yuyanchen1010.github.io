@@ -16,6 +16,9 @@ const englishIflaCompetitionEntry =
 
 assert.equal(contentSource.split(expectedTitle).length - 1, 4, "Paper 03 title must appear in four bilingual entries");
 assert.equal(contentSource.includes("Cooxling"), false, "Old Paper 03 typo must be removed");
+assert.equal(contentSource.split('type: "Second Author"').length - 1, 6, "Paper 03 must use the standard Second Author topline label in both languages");
+assert.equal(contentSource.split('roleNote: "Online Research Assistant"').length - 1, 2, "Paper 03 must show Online Research Assistant below the title in both languages");
+assert.ok(appSource.includes('className="project-role-note"'), "Role note must render directly below the project title");
 assert.equal(contentSource.includes("researchInterests"), false, "Research Interests content must be removed");
 assert.equal(contentSource.includes('research: "研究兴趣"'), false, "Chinese section label must be removed");
 assert.equal(contentSource.includes('research: "Research Interests"'), false, "English section label must be removed");
