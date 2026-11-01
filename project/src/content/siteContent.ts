@@ -434,8 +434,9 @@ export const content: Record<Language, SiteContent> = {
       },
     ],
     news: [
-      { date: "2026.10", text: "以第一作者身份主导的论文《Unravelling the Differentiated Effects of the Block Built Environment on PM2.5 Concentrations: A New Research Framework based on the Perspective of Source-Flow-Sink》被《Sustainable Cities and Society》顺利接收。" },      { date: "2026.08", text: "以总分 7.5 分通过雅思考试，其中听力 7.5 分、阅读 9 分、口语 6.5 分、写作 6.5 分。" },
-      { date: "2026.07", text: "作品《Greenery and Wind: Landscape Strategies for Air Pollution Mitigation Along the NYC Marathon Route》入围 2026 IFLA 全球风景园林奖学生组“城市健康与福祉”类别全球三强，获 Finalist (Top 3 Worldwide)，本人排序 2/7。" },
+      { date: "2026.10", text: "以第一作者身份主导的论文《Unravelling the Differentiated Effects of the Block Built Environment on PM2.5 Concentrations: A New Research Framework based on the Perspective of Source-Flow-Sink》被《Sustainable Cities and Society》顺利接收。" },
+      { date: "2026.10", text: "以第二作者身份完成的作品《Greenery and Wind: Landscape Strategies for Air Pollution Mitigation Along the NYC Marathon Route》获得 2026 IFLA 全球风景园林奖学生组“城市健康与福祉”类别第二名，并赴香港参加 IFLA 会议及颁奖晚宴。" },
+      { date: "2026.08", text: "以总分 7.5 分通过雅思考试，其中听力 7.5 分、阅读 9 分、口语 6.5 分、写作 6.5 分。" },
       { date: "2026.06", text: "以第二作者及 online Research Assistant 身份参与的论文《From Green Space to Park-Based Cooling Potential: Performance-Weighted Walkable Access to Urban Park Cooling in Detroit》被《Sustainable Cities and Society》顺利接收。" },
       { date: "2025.11", text: "以第一作者身份在中国风景园林年会上发表论文《基于空间计量的文化遗产廊道构建研究——以大理市为例》并参会。" },
       { date: "2025.08", text: "以第一作者身份在中国城市规划年会上发表 poster《基于滞尘模型的绿色空间格局对PM2.5影响研究》并参会。" },
@@ -741,8 +742,9 @@ export const content: Record<Language, SiteContent> = {
       },
     ],
     news: [
-      { date: "Oct 2026", text: "The first-author paper Unravelling the Differentiated Effects of the Block Built Environment on PM2.5 Concentrations: A New Research Framework based on the Perspective of Source-Flow-Sink was accepted by Sustainable Cities and Society." },      { date: "Aug 2026", text: "I achieved an IELTS overall band score of 7.5, with 7.5 in Listening, 9.0 in Reading, 6.5 in Speaking, and 6.5 in Writing." },
-      { date: "Jul 2026", text: "Greenery and Wind: Landscape Strategies for Air Pollution Mitigation Along the NYC Marathon Route was named Finalist (Top 3 Worldwide) in the Student Category—Urban Health and Well-being at the IFLA Global Landscape Architecture Awards 2026; my contribution order was 2/7." },
+      { date: "Oct 2026", text: "The first-author paper Unravelling the Differentiated Effects of the Block Built Environment on PM2.5 Concentrations: A New Research Framework based on the Perspective of Source-Flow-Sink was accepted by Sustainable Cities and Society." },
+      { date: "Oct 2026", text: "As second author, I contributed to the project Greenery and Wind: Landscape Strategies for Air Pollution Mitigation Along the NYC Marathon Route, which won second place in the Student Category—Urban Health and Well-being at the IFLA Global Landscape Architecture Awards 2026. I traveled to Hong Kong to attend the IFLA conference and awards dinner." },
+      { date: "Aug 2026", text: "I achieved an IELTS overall band score of 7.5, with 7.5 in Listening, 9.0 in Reading, 6.5 in Speaking, and 6.5 in Writing." },
       { date: "Jun 2026", text: "The paper From Green Space to Park-Based Cooling Potential: Performance-Weighted Walkable Access to Urban Park Cooling in Detroit, with me as second author and online Research Assistant, was accepted by Sustainable Cities and Society." },
       { date: "Nov 2025", text: "Presented the first-author paper Construction of Cultural Heritage Corridors Based on Spatial Econometrics: A Case Study of Dali at the Chinese Landscape Architecture Annual Conference." },
       { date: "Aug 2025", text: "Presented the first-author poster Effects of Green Space Pattern on PM2.5 Based on a Dust Retention Model at the Annual National Planning Conference." },

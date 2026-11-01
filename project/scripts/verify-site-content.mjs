@@ -13,6 +13,10 @@ const chineseIflaCompetitionEntry =
   "2026.05-2026.06：2026 IFLA全球风景园林奖｜学生组“城市健康与福祉”类别全球三强入围（2/7）";
 const englishIflaCompetitionEntry =
   "May 2026-Jun 2026: Finalist (Top 3 Worldwide), Student Category—Urban Health and Well-being, IFLA Global Landscape Architecture Awards 2026 (2/7).";
+const chineseIflaNews =
+  "以第二作者身份完成的作品《Greenery and Wind: Landscape Strategies for Air Pollution Mitigation Along the NYC Marathon Route》获得 2026 IFLA 全球风景园林奖学生组“城市健康与福祉”类别第二名，并赴香港参加 IFLA 会议及颁奖晚宴。";
+const englishIflaNews =
+  "As second author, I contributed to the project Greenery and Wind: Landscape Strategies for Air Pollution Mitigation Along the NYC Marathon Route, which won second place in the Student Category—Urban Health and Well-being at the IFLA Global Landscape Architecture Awards 2026. I traveled to Hong Kong to attend the IFLA conference and awards dinner.";
 
 assert.equal(contentSource.split(expectedTitle).length - 1, 4, "Paper 03 title must appear in four bilingual entries");
 assert.equal(contentSource.includes("Cooxling"), false, "Old Paper 03 typo must be removed");
@@ -33,6 +37,10 @@ assert.ok(contentSource.includes(iflaProjectTitle), "IFLA project title must be 
 assert.ok(contentSource.includes("2/7"), "IFLA contribution order must be present");
 assert.ok(contentSource.includes(chineseIflaCompetitionEntry), "Chinese IFLA competition entry must use the requested concise date range");
 assert.ok(contentSource.includes(englishIflaCompetitionEntry), "English IFLA competition entry must use the concise date range");
+assert.ok(contentSource.includes(`{ date: "2026.10", text: "${chineseIflaNews}" }`), "Chinese IFLA news must include the October award and Hong Kong attendance update");
+assert.ok(contentSource.includes(`{ date: "Oct 2026", text: "${englishIflaNews}" }`), "English IFLA news must include the October award and Hong Kong attendance update");
+assert.equal(contentSource.includes('{ date: "2026.07", text: "作品《Greenery and Wind'), false, "Outdated Chinese July IFLA news must be removed");
+assert.equal(contentSource.includes('{ date: "Jul 2026", text: "Greenery and Wind'), false, "Outdated English July IFLA news must be removed");
 assert.ok(contentSource.includes("雅思 7.5 分"), "Chinese introduction must include the IELTS score");
 assert.ok(appSource.includes('"雅思 7.5 分"'), "Chinese IELTS score must be bolded");
 assert.ok(contentSource.includes('{ date: "2026.08"'), "Chinese IELTS news must be the newest item");
