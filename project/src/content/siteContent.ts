@@ -181,7 +181,7 @@ export const content: Record<Language, SiteContent> = {
       location: "湖北武汉 / Open to global PhD opportunities",
       email: "yuyanchen@hust.edu.cn",
       phone: "1530-715-2883",
-      cvUrl: "/cv-zh.pdf",
+      cvUrl: "/cv-zh.pdf?v=b857b58b",
       cvLabel: "下载中文简历",
       contactLabel: "联系我",
       links: [
@@ -487,7 +487,7 @@ export const content: Record<Language, SiteContent> = {
       location: "Wuhan, China / Open to global PhD opportunities",
       email: "yuyanchen@hust.edu.cn",
       phone: "1530-715-2883",
-      cvUrl: "/cv-en.pdf",
+      cvUrl: "/cv-en.pdf?v=6070a7d2",
       cvLabel: "Download CV",
       contactLabel: "Contact",
       links: [
